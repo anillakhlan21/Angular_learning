@@ -1,0 +1,16 @@
+<div class="border border-primary m-3 p-3">
+    <div>
+        <h1>ngOnChanges component</h1>
+        <label for="userName">Name</label>
+        <input [(ngModel)]="userName" type="text" class="form-control" id="userName" placeholder="Enter your name" />
+        <div>
+            <label for="fatherName">Father's Name</label>
+            <input type="text" id="fatherName" [(ngModel)]="parentsInformation.fatherName">
+        </div>
+        <div>
+            <label for="motherName">Mother's Name</label>
+            <input type="text" id="motherName" [(ngModel)]="parentsInformation.motherName">
+        </div>
+    </div>
+    <app-child-A [name]="userName" [parentInfo]="parentsInformation"></app-child-A>
+</div>

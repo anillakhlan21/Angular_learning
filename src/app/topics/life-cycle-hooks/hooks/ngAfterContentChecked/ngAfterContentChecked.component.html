@@ -1,0 +1,11 @@
+<div class="m-3 p-3 border border-primary">
+    <h1>ngAfterContentChecked Component</h1>
+    <label for="inputField">Make Change in Child content</label>
+    <input type="number" id="inputField" [(ngModel)]="counter">
+    <app-child-d>
+        <h1 #header>Header</h1>
+        <p #main>Main content</p>
+        <p #footer>Footer</p>
+        <pre> User is making Changes in parent compo (ngAfterContetntCheckedComponent): {{counter}}</pre>
+    </app-child-d>
+</div>

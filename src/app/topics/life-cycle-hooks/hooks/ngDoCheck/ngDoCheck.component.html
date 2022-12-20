@@ -1,0 +1,8 @@
+<div class="border border-primary m-3 p-3">
+    <div>
+        <h1>ngOnChanges component</h1>
+        <input [(ngModel)]="userInformation.name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Enter your name">
+        <input [(ngModel)]="userInformation.DOB" type="date" class="form-control" id="exampleInputEmail1" placeholder="Enter your name">
+    </div>
+    <app-child-B [userInfo]="userInformation"></app-child-B>
+</div>

@@ -1,0 +1,6 @@
+<div class="m-3 p-3 border border-warning">
+    <h1>NgOnDestory component ( parent component)</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, nam.</p>
+    <button class="btn btn-success" (click)="isUserDatailsVisible=!isUserDatailsVisible">Show/hide user Details</button>
+    <app-child-e *ngIf="isUserDatailsVisible"></app-child-e>
+</div>
