@@ -1,6 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { NgClassDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-class-directive/ng-class-directive.component';
+import { NgModelDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-model-directive/ng-model-directive.component';
+import { NgStyleDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-style-directive/ng-style-directive.component';
+import { NgForDirectiveComponent } from './topics/Directives/Structural-Directives/ng-for-directive/ng-for-directive.component';
+import { NgIfDirectiveComponent } from './topics/Directives/Structural-Directives/ng-if-directive/ng-if-directive.component';
+import { NgSwitchCaseDirectiveComponent } from './topics/Directives/Structural-Directives/ng-switch-case-directive/ng-switch-case-directive.component';
 import { ConstructorComponent } from './topics/life-cycle-hooks/constructor/constructor.component';
 import { NgAfteContentCheckedComponent } from './topics/life-cycle-hooks/hooks/ngAfterContentChecked/ngAfterContentChecked.component';
 import { NgAfteContentInitComponent } from './topics/life-cycle-hooks/hooks/ngAfterContentInit/ngAfteContentInit.component';
@@ -67,9 +73,39 @@ const routes: Routes = [
             component: NgOnDestroyComponent
           }
         ]
+      },
+      {
+        path: 'directives',
+        children: [
+          {
+            path: 'ngIf',
+            component: NgIfDirectiveComponent
+          },
+          {
+            path: 'ngSwitchCase',
+            component: NgSwitchCaseDirectiveComponent
+          },
+          {
+            path: 'ngFor',
+            component: NgForDirectiveComponent
+          },
+          {
+            path: 'ngClass',
+            component: NgClassDirectiveComponent
+          },
+          {
+            path: 'ngStyle',
+            component: NgStyleDirectiveComponent
+          },
+          {
+            path: 'ngModel',
+            component: NgModelDirectiveComponent
+          }
+        ]
       }
     ]
-  }
+  },
+
 ];
 
 @NgModule({

@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LifeCycleHooksComponent } from './topics/life-cycle-hooks/life-cycle-hooks.component';
 import { DataBindingComponent } from './topics/data-binding/data-binding.component';
-import { DirectivesComponent } from './topics/directives/directives.component';
 import { PipesComponent } from './topics/pipes/pipes.component';
 import { FormsComponent } from './topics/forms/forms.component';
 import { ComponentCommunicationComponent } from './topics/component-communication/component-communication.component';
@@ -27,6 +26,14 @@ import { NgAfteViewInitComponent } from './topics/life-cycle-hooks/hooks/ngAfteV
 import { NgAfterViewCheckedComponent } from './topics/life-cycle-hooks/hooks/ngAfterViewChecked/ngAfterViewChecked.component';
 import { ChildEComponent } from './topics/life-cycle-hooks/hooks/ngOnDestroy/child-e/child-e.component';
 import { NgOnDestroyComponent } from './topics/life-cycle-hooks/hooks/ngOnDestroy/ngOnDestroy.component';
+import { TheoryComponent } from './topics/Directives/theory/theory.component';
+import { ComponentDirectiveComponent } from './topics/Directives/component-directive/component-directive.component';
+import { NgIfDirectiveComponent } from './topics/Directives/Structural-Directives/ng-if-directive/ng-if-directive.component';
+import { NgForDirectiveComponent } from './topics/Directives/Structural-Directives/ng-for-directive/ng-for-directive.component';
+import { NgSwitchCaseDirectiveComponent } from './topics/Directives/Structural-Directives/ng-switch-case-directive/ng-switch-case-directive.component';
+import { NgStyleDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-style-directive/ng-style-directive.component';
+import { NgClassDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-class-directive/ng-class-directive.component';
+import { NgModelDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-model-directive/ng-model-directive.component';
 
 
 @NgModule({
@@ -36,7 +43,6 @@ import { NgOnDestroyComponent } from './topics/life-cycle-hooks/hooks/ngOnDestro
     DashboardComponent,
     LifeCycleHooksComponent,
     DataBindingComponent,
-    DirectivesComponent,
     PipesComponent,
     FormsComponent,
     ComponentCommunicationComponent,
@@ -54,7 +60,15 @@ import { NgOnDestroyComponent } from './topics/life-cycle-hooks/hooks/ngOnDestro
     NgAfteViewInitComponent,
     NgAfterViewCheckedComponent,
     ChildEComponent,
-    NgOnDestroyComponent
+    NgOnDestroyComponent,
+    TheoryComponent,
+    ComponentDirectiveComponent,
+    NgIfDirectiveComponent,
+    NgForDirectiveComponent,
+    NgSwitchCaseDirectiveComponent,
+    NgStyleDirectiveComponent,
+    NgClassDirectiveComponent,
+    NgModelDirectiveComponent
   ],
   imports: [
     BrowserModule,

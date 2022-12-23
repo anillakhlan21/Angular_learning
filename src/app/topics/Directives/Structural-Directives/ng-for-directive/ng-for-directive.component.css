@@ -1,0 +1,15 @@
+.even {
+    background-color: rgb(231, 18, 143);
+}
+
+.odd {
+    background-color: rgb(6, 175, 20);
+}
+
+.first {
+    background-color: rgb(102, 24, 24);
+}
+
+.last {
+    background-color: rgb(35, 23, 204);
+}

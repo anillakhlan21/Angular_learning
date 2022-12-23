@@ -1,0 +1,48 @@
+<div class="m-3 p-3 border border-danger">
+    <h1>NgClass Directive</h1>
+    <div class="m-3 p-3 border border-warning">
+
+        <h3>Basic use</h3>
+        <div [ngClass]="'red size20'"> Red Text with Size 20px </div>
+        <p>You can also use the ngClass without a square bracket. In that case, the expression is not evaluated but assigned directly to the class attribute. We also need to remove the double quote around the expression as shown below.</p>
+        <div class="row">
+            <div ngClass='red size20'>Red Text with Size 20px </div>
+        </div>
+
+    </div>
+    <div class="m-3 p-3 border border-warning">
+        <h3>NgClass with Array</h3>
+        <div [ngClass]="['red','size20']">Red Text with Size 20px </div>
+    </div>
+    <div class="m-3 p-3 border border-warning">
+        <h3>NgClass with Object</h3>
+        <div>
+            <div [ngClass]="{'red':true,'size20':true}">Red Text with Size 20px</div>
+        </div>
+    </div>
+    <div class="m-3 p-3 border border-warning">
+        <h3>Dynamically updating Class names</h3>
+        <hr>
+        <div>
+            <h4>Using strings</h4>
+            <div class="row">
+                <div [ngClass]="cssStringVar">Red Text with Size 20px : from component </div>
+            </div>
+        </div>
+        <div>
+            <h4>Using Array</h4>
+            <div class="row">
+                <div class="row">
+                    <div [ngClass]="cssArray">
+                        Red Text with Size 20px : from CSS Array
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h4>Using JavaScript object</h4>
+            <div class="row">
+                <div [ngClass]="cssClass"> Red Text with Size 20px : from component as object</div>
+            </div>
+        </div>
+    </div>

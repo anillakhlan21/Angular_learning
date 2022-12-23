@@ -1,0 +1,111 @@
+<div>
+    <div class="m-3 p-3 border border-primary">
+        <h3>Simple example of ngFor</h3>
+        <div class='table-responsive'>
+            <table class='table table-bordered table-sm '>
+                <thead class="thead-dark">
+                    <tr>
+
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies">
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="m-3 p-3 border border-primary">
+        <h3>Nested Array</h3>
+        <div class='table-responsive'>
+            <table class='table table-bordered table-sm '>
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Mail ID</th>
+                        <th>Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees;">
+                        <td>{{employee.name}}</td>
+                        <td>{{employee.email}}</td>
+                        <td>
+                            <table class='table table-sm '>
+                                <tbody>
+                                    <tr *ngFor="let skill of employee.skills;">
+                                        <td>{{skill.skill}}</td>
+                                        <td>{{skill.exp}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="m-3 p-3 border border-primary">
+        <h3>Local variable: Finding the Index</h3>
+        <tr *ngFor="let movie of movies; let i=index;">
+            <td> {{i}} </td>
+            <td>{{movie.title}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.cast}}</td>
+            <td>{{movie.releaseDate}}</td>
+        </tr>
+    </div>
+    <div class="m-3 p-3 border border-primary">
+        <h3>Local variable: Formatting odd & even rows</h3>
+        <tr *ngFor="let movie of movies; let i=index; let o= odd; let e=even;" [ngClass]="{ odd: o, even: e }">
+            <td> {{i}} </td>
+            <td>{{movie.title}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.cast}}</td>
+            <td>{{movie.releaseDate}}</td>
+        </tr>
+    </div>
+    <div class="m-3 p-3 border border-primary">
+        <h3>Local variable: First and the Last element of a list</h3>
+        <div class='table-responsive'>
+            <table class='table table-bordered table-sm '>
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Index</th>
+                        <th>Title</th>
+                        <th>Director</th>
+                        <th>Cast</th>
+                        <th>Release Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let movie of movies; let i=index; let first= first; let last=last;" [ngClass]="{ first: first, last: last }">
+                        <td> {{i}} </td>
+                        <td>{{movie.title}}</td>
+                        <td>{{movie.director}}</td>
+                        <td>{{movie.cast}}</td>
+                        <td>{{movie.releaseDate}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="m-3 p-3 border border-primary">
+        <h3>Local variable: TrackBy</h3>
+        <tr *ngFor="let movie of movies; trackBy:trackByFn;">
+            <td>{{movie.title}}</td>
+            <td>{{movie.director}}</td>
+            <td>{{movie.cast}}</td>
+            <td>{{movie.releaseDate}}</td>
+        </tr>
+    </div>
+</div>

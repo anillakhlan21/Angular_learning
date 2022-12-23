@@ -1,0 +1,53 @@
+<div class="m-3 p-3 border border-primary">
+    <h1>NgIf structural directive</h1>
+    <div class="m-3 p-3 border border-secondary">
+        <h3>Simple example of ngIf</h3>
+        <input type="checkbox" id="abc" [(ngModel)]="condition1">
+        <label for="abc">Show Paragraph</label>
+        <p *ngIf="condition1">
+            content to render, when the condition is true
+        </p>
+    </div>
+    <div class="m-3 p-3 border border-secondary">
+        <h3>Hidden attribute Vs ngIf</h3>
+        <input type="checkbox" id="abc" [(ngModel)]="condition2">
+        <label for="abc">Show Paragraph</label>
+        <p [hidden]="!condition2">
+            content to render, when the condition is true
+        </p>
+    </div>
+    <div class="m-3 p-3 border border-secondary">
+        <h3>ngIf else</h3>
+        <input type="checkbox" id="abc" [(ngModel)]="condition3">
+        <label for="abc">Show Paragraph</label>
+        <div *ngIf="condition3; else elseBlock1">
+            content to render, when the condition is true
+        </div>
+
+        <ng-template #elseBlock1>
+            <div>
+                content to render, when the condition is false
+            </div>
+        </ng-template>
+    </div>
+    <div class="m-3 p-3 border border-secondary">
+        <h3>ngIf then else</h3>
+        <input type="checkbox" id="abc" [(ngModel)]="condition4">
+        <label for="abc">Show Paragraph</label>
+        <div *ngIf="condition4; then thenBlock else elseBlock2">
+            This content is not shown
+        </div>
+
+        <ng-template #thenBlock>
+            <div>
+                content to render when the condition is true.
+            </div>
+        </ng-template>
+
+        <ng-template #elseBlock2>
+            <div>
+                content to render when condition is false.
+            </div>
+        </ng-template>
+    </div>
+</div>
