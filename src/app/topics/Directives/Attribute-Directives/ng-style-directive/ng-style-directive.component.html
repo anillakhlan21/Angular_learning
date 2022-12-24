@@ -1,1 +1,53 @@
-<p>ng-style-directive works!</p>
+<div class="border border-primary m-3 p-3">
+    <h1>NgStyle Attribute Directive</h1>
+    <!-- --Change Style Dynamically-----------------------------------------------------------------------  -->
+    <div class="border border-primary m-3 p-3">
+        <h3>Change Style Dynamically</h3>
+        <div>
+            <input [(ngModel)]="color" />
+            <div [ngStyle]="{ color: color }">Change my color</div>
+        </div>
+    </div>
+    <!--ternary operator in expression of ngStyle----------------------------------------------- -->
+    <div class="border border-primary m-3 p-3">
+        <h3>ternary operator in expression of ngStyle</h3>
+        <div class="m-1 p-2">
+            <input type="checkbox" [(ngModel)]="isError" #err>
+            <label class="m-1" for="err">Create Error</label>
+        </div>
+        <div [ngStyle]="{ 'background-color': isError  ? 'red' : 'green' }">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+    <!-- ---------ngStyle multiple attributes---------------------------------------------------  -->
+    <div class="border border-primary m-3 p-3">
+        <h3>ngStyle multiple attributes</h3>
+        <div>
+            <p [ngStyle]="{'color': 'purple',
+               'font-size': '20px',
+               'font-weight': 'bold'}">
+                Multiple styles
+            </p>
+        </div>
+    </div>
+    <!-- ----------Specifying CSS Units in ngStyle--------------------------------------------  -->
+    <div class="border border-primary m-3 p-3">
+        <h3>Specifying CSS Units in ngStyle</h3>
+        <input type="number" [(ngModel)]="size" />
+        <div [ngStyle]="{'font-size.px': size}">Change my size</div>
+    </div>
+    <!-- ----------Using object--------------------------------------------  -->
+    <div class="border border-primary m-3 p-3">
+        <h3>Using object</h3>
+        <div [ngStyle]="styleClass">size & Color</div>
+    </div>
+    <!-- ----------Suggestion--------------------------------------------  -->
+    <div class="border border-primary m-3 p-3 bg-info">
+        <h3>Suggestion</h3>
+        <h5>Change Style using Style Property Binding</h5>
+        <div>We can also change the Styles using the Style Binding. <br> <b>Please Revise Style Binding </b></div>
+    </div>
+
+
+
+</div>

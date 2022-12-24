@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-model-directive.component.css']
 })
 export class NgModelDirectiveComponent implements OnInit {
-
+  name: string = ''
   constructor() { }
 
   ngOnInit(): void {

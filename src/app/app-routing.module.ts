@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgClassDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-class-directive/ng-class-directive.component';
@@ -18,6 +18,15 @@ import { NgOnDestroyComponent } from './topics/life-cycle-hooks/hooks/ngOnDestro
 import { NgOnInitComponent } from './topics/life-cycle-hooks/hooks/ngOnInit/ngOnInit.component';
 import { LifeCycleHooksTheoryComponent } from './topics/life-cycle-hooks/life-cycle-hooks-theory/life-cycle-hooks-theory.component';
 import { LifeCycleHooksComponent } from './topics/life-cycle-hooks/life-cycle-hooks.component';
+import { TheoryComponent } from './topics/Directives/theory/theory.component';
+import { PipeTheoryComponent } from './topics/pipes/pipe-theory/pipe-theory.component';
+import { DatePipeComponent } from './topics/pipes/built-in-pipes/date-pipe/date-pipe.component';
+import { UpperCasePipeComponent } from './topics/pipes/built-in-pipes/upper-case-pipe/upper-case-pipe.component';
+import { LowerCasePipeComponent } from './topics/pipes/built-in-pipes/lower-case-pipe/lower-case-pipe.component';
+import { CurrencyPipeComponent } from './topics/pipes/built-in-pipes/currency-pipe/currency-pipe.component';
+import { NumberPipeComponent } from './topics/pipes/built-in-pipes/number-pipe/number-pipe.component';
+import { PercentPipeComponent } from './topics/pipes/built-in-pipes/percent-pipe/percent-pipe.component';
+import { SlicePipeComponent } from './topics/pipes/built-in-pipes/slice-pipe/slice-pipe.component';
 
 const routes: Routes = [
   {
@@ -78,6 +87,10 @@ const routes: Routes = [
         path: 'directives',
         children: [
           {
+            path: 'theory',
+            component: TheoryComponent
+          },
+          {
             path: 'ngIf',
             component: NgIfDirectiveComponent
           },
@@ -102,11 +115,48 @@ const routes: Routes = [
             component: NgModelDirectiveComponent
           }
         ]
+      },
+      {
+        path: 'pipes',
+        children: [
+          {
+            path: 'theory',
+            component: PipeTheoryComponent,
+          },
+          {
+            path: 'date-pipe',
+            component: DatePipeComponent
+          },
+          {
+            path: 'upper-case-pipe',
+            component: UpperCasePipeComponent,
+          },
+          {
+            path: 'lower-case-pipe',
+            component: LowerCasePipeComponent
+          },
+          {
+            path: 'currency-pipe',
+            component: CurrencyPipeComponent,
+          },
+          {
+            path: 'number-pipe',
+            component: NumberPipeComponent,
+          },
+          {
+            path: 'percent-pipe',
+            component: PercentPipeComponent,
+          },
+          {
+            path: 'slice-pipe',
+            component: SlicePipeComponent,
+          }
+
+
+        ]
       }
     ]
-  },
-
-];
+  }]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

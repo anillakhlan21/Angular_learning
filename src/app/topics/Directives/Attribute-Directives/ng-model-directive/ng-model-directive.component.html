@@ -1,1 +1,9 @@
-<p>ng-model-directive works!</p>
+<div class="border border-secondary m-3 p-3">
+    <h1>NgModel Attribute Directive</h1>
+    <p>This directive is used for two way data binding</p>
+    <div class="border border-info m-3 p-3">
+        <label class="form-label " for="name">Enter Your name</label>
+        <input class="p-1 m-1 form-control  col-2" type="text" [(ngModel)]="name" placeholder="Enter Your name">
+        <pre>Your name is : {{name}}</pre>
+    </div>
+</div>

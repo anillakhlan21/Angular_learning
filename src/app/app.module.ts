@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LifeCycleHooksComponent } from './topics/life-cycle-hooks/life-cycle-hooks.component';
 import { DataBindingComponent } from './topics/data-binding/data-binding.component';
-import { PipesComponent } from './topics/pipes/pipes.component';
 import { FormsComponent } from './topics/forms/forms.component';
 import { ComponentCommunicationComponent } from './topics/component-communication/component-communication.component';
 import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
@@ -34,6 +33,14 @@ import { NgSwitchCaseDirectiveComponent } from './topics/Directives/Structural-D
 import { NgStyleDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-style-directive/ng-style-directive.component';
 import { NgClassDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-class-directive/ng-class-directive.component';
 import { NgModelDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-model-directive/ng-model-directive.component';
+import { PipeTheoryComponent } from './topics/pipes/pipe-theory/pipe-theory.component';
+import { DatePipeComponent } from './topics/pipes/built-in-pipes/date-pipe/date-pipe.component';
+import { UpperCasePipeComponent } from './topics/pipes/built-in-pipes/upper-case-pipe/upper-case-pipe.component';
+import { LowerCasePipeComponent } from './topics/pipes/built-in-pipes/lower-case-pipe/lower-case-pipe.component';
+import { SlicePipeComponent } from './topics/pipes/built-in-pipes/slice-pipe/slice-pipe.component';
+import { NumberPipeComponent } from './topics/pipes/built-in-pipes/number-pipe/number-pipe.component';
+import { PercentPipeComponent } from './topics/pipes/built-in-pipes/percent-pipe/percent-pipe.component';
+import { CurrencyPipeComponent } from './topics/pipes/built-in-pipes/currency-pipe/currency-pipe.component';
 
 
 @NgModule({
@@ -43,7 +50,6 @@ import { NgModelDirectiveComponent } from './topics/Directives/Attribute-Directi
     DashboardComponent,
     LifeCycleHooksComponent,
     DataBindingComponent,
-    PipesComponent,
     FormsComponent,
     ComponentCommunicationComponent,
     ServicesDependencyComponent,
@@ -68,7 +74,15 @@ import { NgModelDirectiveComponent } from './topics/Directives/Attribute-Directi
     NgSwitchCaseDirectiveComponent,
     NgStyleDirectiveComponent,
     NgClassDirectiveComponent,
-    NgModelDirectiveComponent
+    NgModelDirectiveComponent,
+    PipeTheoryComponent,
+    DatePipeComponent,
+    UpperCasePipeComponent,
+    LowerCasePipeComponent,
+    SlicePipeComponent,
+    NumberPipeComponent,
+    PercentPipeComponent,
+    CurrencyPipeComponent
   ],
   imports: [
     BrowserModule,

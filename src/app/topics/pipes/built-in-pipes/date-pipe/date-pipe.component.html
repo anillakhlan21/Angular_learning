@@ -1,0 +1,53 @@
+<div class="m-3 p-3 border border-danger">
+    <h1>Date Pipe</h1>
+    <div class="m-3 p-3 border border-primary">
+        <h3>How to use Pipe</h3>
+        <div>
+            <p> Unformatted date : {{toDate }} </p>
+            <p> Formatted date : {{toDate | date}} </p>
+        </div>
+    </div>
+    <!-- --------Passing arguments to pipes-------------------------------------------------------------------- -->
+    <div class="m-3 p-3 border border-primary">
+        <h3>Passing arguments to pipes</h3>
+        <div>
+            <p> Formatted date without arguments : {{toDate | date}} </p>
+            <p> Formatted date with arguments : {{toDate | date:'medium'}} </p>
+        </div>
+    </div>
+    <!-- --------Chaining Pipes-------------------------------------------------------------------- -->
+    <div class="m-3 p-3 border border-primary">
+        <h3>Chaining Pipes</h3>
+        <div>
+            <p> Chaining multiple pipes: {{toDate | date | uppercase}} </p>
+        </div>
+    </div>
+    <!-- --------Predefined commonly used formats-------------------------------------------------------------------- -->
+    <div class="m-3 p-3 border border-primary">
+        <h3>Predefined commonly used formats</h3>
+        <div>
+            <p> medium : {{toDate | date:'medium'}} </p>
+            <p> short : {{toDate | date:'short'}} </p>
+            <p> fullDate : {{toDate | date:'fullDate'}} </p>
+            <p> longDate : {{toDate | date:'longDate'}} </p>
+            <p> mediumDate : {{toDate | date:'mediumDate'}} </p>
+            <p> shortDate : {{toDate | date:'shortDate'}} </p>
+            <p> mediumTime : {{toDate | date:'mediumTime'}} </p>
+            <p> shortTime : {{toDate | date:'shortTime'}} </p>
+        </div>
+    </div>
+    <!-- --------Formats-------------------------------------------------------------------- -->
+    <div class="m-3 p-3 border border-primary">
+        <h3>Formats</h3>
+        <div>
+            <p> medium : {{toDate | date:'medium'}} </p>
+            <p> short : {{toDate | date:'short'}} </p>
+            <p> fullDate : {{toDate | date:'fullDate'}} </p>
+            <p> longDate : {{toDate | date:'longDate'}} </p>
+            <p> mediumDate : {{toDate | date:'mediumDate'}} </p>
+            <p> shortDate : {{toDate | date:'shortDate'}} </p>
+            <p> mediumTime : {{toDate | date:'mediumTime'}} </p>
+            <p> shortTime : {{toDate | date:'shortTime'}} </p>
+        </div>
+    </div>
+</div>
