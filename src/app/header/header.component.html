@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-light" style=" width: max-content;">
+<nav class="scroll-hide navbar navbar-expand-lg bg-light" style="overflow-x: inherit ; ">
     <div class="container-fluid">
         <!-- ------------navbar list----------------------------- -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -10,6 +10,51 @@
                     <ul class="dropdown-menu">
                         <li>
                             <a class="dropdown-item" href="#">Theory</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="dropdown-item" href="#">One way &raquo;</a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                    <a class="dropdown-item" href="#">View -> Component &raquo;</a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Event Binding</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="#">View <-Component &raquo;</a>
+                                    <ul class="dropdown-menu dropdown-submenu">
+                                        <li>
+                                            <a class="dropdown-item" href="#">Property Binding &raquo;</a>
+                                            <ul class="dropdown-menu dropdown-submenu">
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Class Binding</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Style Binding</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="#">Attribute Binding</a>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="#">String Interpolation</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">Two way &raquo;</a>
+                            <ul class="dropdown-menu dropdown-submenu">
+                                <li>
+                                    <a class="dropdown-item" href="#">NgModel</a>
+                                </li>
+
+                            </ul>
                         </li>
                     </ul>
                 </li>
@@ -71,13 +116,17 @@
                             <a class="dropdown-item"> Structural Directives &raquo; </a>
                             <ul class="dropdown-menu dropdown-submenu">
                                 <li>
-                                    <a routerLink="directives/ngIf" class="dropdown-item">ngIf</a>
+                                    <a routerLink="directives/structural/built-in/ngIf" class="dropdown-item">ngIf</a>
                                 </li>
                                 <li>
-                                    <a routerLink="directives/ngFor" class="dropdown-item">ngFor</a>
+                                    <a routerLink="directives/structural/built-in/ngFor" class="dropdown-item">ngFor</a>
                                 </li>
                                 <li>
-                                    <a routerLink="directives/ngSwitchCase" class="dropdown-item">ngSwitch case</a>
+                                    <a routerLink="directives/structural/built-in/ngSwitchCase" class="dropdown-item">ngSwitch case</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a routerLink="directives/structural/custom" class="dropdown-item">Custom</a>
                                 </li>
                             </ul>
                         </li>
@@ -85,13 +134,17 @@
                             <a class="dropdown-item">Attribute Directives &raquo; </a>
                             <ul class="dropdown-menu dropdown-submenu">
                                 <li>
-                                    <a routerLink="directives/ngClass" class="dropdown-item">ngClass</a>
+                                    <a routerLink="directives/attribute/built-in/ngClass" class="dropdown-item">ngClass</a>
                                 </li>
                                 <li>
-                                    <a routerLink="directives/ngStyle" class="dropdown-item">ngStyle</a>
+                                    <a routerLink="directives/attribute/built-in/ngStyle" class="dropdown-item">ngStyle</a>
                                 </li>
                                 <li>
-                                    <a routerLink="directives/ngModel" class="dropdown-item">ngModel</a>
+                                    <a routerLink="directives/attribute/built-in/ngModel" class="dropdown-item">ngModel</a>
+                                </li>
+                                <hr>
+                                <li>
+                                    <a routerLink="directives/attribute/custom" class="dropdown-item">Custom</a>
                                 </li>
                             </ul>
                         </li>
@@ -136,6 +189,10 @@
                         </li>
                         <li>
                             <a class="dropdown-item" routerLink="pipes/async-pipe">Async Pipe</a>
+                        </li>
+                        <hr>
+                        <li>
+                            <a class="dropdown-item" routerLink="pipes/custom">Custom Pipes</a>
                         </li>
                     </ul>
                 </li>
@@ -242,7 +299,7 @@
                 </li>
             </ul>
             <!------------Search Input Field------------------------>
-            <form class="d-flex" role="search">
+            <form class="d-flex input-field" role="search">
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>

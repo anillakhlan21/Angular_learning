@@ -17,3 +17,12 @@
 .dropdown-menu>li:hover>.dropdown-submenu {
     display: block;
 }
+
+.input-field {
+    width: 267px;
+    margin-left: 17px;
+}
+
+.scroll-hide::-webkit-scrollbar {
+    display: none;
+}

@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HostBindingComponent } from './host-binding.component';
+import { CustomPipesComponent } from './custom-pipes.component';
 
-describe('HostBindingComponent', () => {
-  let component: HostBindingComponent;
-  let fixture: ComponentFixture<HostBindingComponent>;
+describe('CustomPipesComponent', () => {
+  let component: CustomPipesComponent;
+  let fixture: ComponentFixture<CustomPipesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HostBindingComponent ]
+      declarations: [ CustomPipesComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HostBindingComponent);
+    fixture = TestBed.createComponent(CustomPipesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

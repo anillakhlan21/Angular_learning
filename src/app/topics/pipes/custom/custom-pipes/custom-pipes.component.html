@@ -1,0 +1,8 @@
+<div class="m-3 p-3 border border-primary">
+    <h1>Custom Pipes</h1>
+    <div class="m-3 p-3 border border-danger">
+        <input min="0" type="number" [(ngModel)]="numItems" class="form-control">
+        <h3>Plural Pipe</h3>
+        <div>{{ numItems | plural: 'item': 'items' }}</div>
+    </div>
+</div>
