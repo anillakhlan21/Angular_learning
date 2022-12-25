@@ -1,1 +1,14 @@
-<p>custom-attribute-directives works!</p>
+<div class="m-3 p-3 border border-info">
+    <h1>Custom Attribute Directives</h1>
+    <div class="m-3 p-3 border border-success">
+        <h3>Image zoom directive</h3>
+        <div class="m-1 p-1">
+            <input type="number" [(ngModel)]="zoomPercentageFist" class="form-control">
+            <img src=" ../../../../../../assets/images/nature_1.jpeg " [appImageZoom]="zoomPercentageFist" alt=" ">
+        </div>
+        <div class="m-1 p-1">
+            <input type="number" [(ngModel)]="zoomPercentageSecond" class="form-control">
+            <img src=" ../../../../../../assets/images/nature_2.jpeg" [appImageZoom]="zoomPercentageSecond" alt=" ">
+        </div>
+    </div>
+</div>

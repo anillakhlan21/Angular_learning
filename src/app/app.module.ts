@@ -52,6 +52,7 @@ import { CustomPipesComponent } from './topics/pipes/custom/custom-pipes/custom-
 import { PluralPipe } from './topics/pipes/custom/pluralization/plural.pipe';
 import { CustomAttributeDirectivesComponent } from './topics/directives/attribute-directives/custom/custom-attribute-directives/custom-attribute-directives.component';
 import { CustomStructuralDirectivesComponent } from './topics/directives/structural-directives/custom/custom-structural-directives/custom-structural-directives.component';
+import { ImageZoomDirective } from './topics/directives/attribute-directives/custom/image-zoom/image-zoom.directive';
 
 registerLocaleData(localeFr);
 
@@ -102,6 +103,7 @@ registerLocaleData(localeFr);
     PluralPipe,
     CustomAttributeDirectivesComponent,
     CustomStructuralDirectivesComponent,
+    ImageZoomDirective,
   ],
   imports: [
     BrowserModule,
