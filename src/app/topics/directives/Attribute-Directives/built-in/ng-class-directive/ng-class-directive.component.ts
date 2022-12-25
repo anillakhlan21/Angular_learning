@@ -9,6 +9,10 @@ export class NgClassDirectiveComponent implements OnInit {
   cssStringVar: string= 'red size20';
   cssArray:string[]=['red','size20'];
   cssClass: CssClass = new CssClass();
+  obj = {
+    red: true,
+    size20: true
+  }
   constructor() { }
 
   ngOnInit(): void {

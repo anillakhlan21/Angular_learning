@@ -1,1 +1,17 @@
-<p>percent-pipe works!</p>
+<div class="m-3 p-3 border border-secondary">
+    <h1>Percent Pipe</h1>
+    <div class="m-3 p-3 border border-info">
+        <h3>Use of Percent Pipe pipe</h3>
+        <div>
+            <p>Unformatted a: {{a}}</p>
+            <p>Unformatted b: {{b}}</p>
+
+            <p>A (simple): {{a | percent}}</p>
+            <p>B (simple): {{b | percent}}</p>
+
+            <p>A (para:4.3-5 ): {{a | percent:'4.3-5'}}</p>
+            <p>B (para:4.3-5 ): {{b | percent:'4.3-5'}}</p>
+
+            <p>B: {{b | percent:'4.3-5':'fr'}}</p>
+        </div>
+    </div>

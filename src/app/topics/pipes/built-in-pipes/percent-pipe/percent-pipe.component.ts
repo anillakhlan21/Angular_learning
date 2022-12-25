@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./percent-pipe.component.css']
 })
 export class PercentPipeComponent implements OnInit {
-
+  a: number = 0.259;
+  b: number = 1.3495;
   constructor() { }
 
   ngOnInit(): void {

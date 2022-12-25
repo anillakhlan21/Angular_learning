@@ -1,1 +1,34 @@
-<p>currency-pipe works!</p>
+<div class="m-3 p-3 border border-secondary">
+    <h1>Currency Pipe</h1>
+    <div class="m-3 p-3 border border-info">
+        <h3>Use of currency pipe </h3>
+        <div>
+            <p>Unformatted A :{{a}} </p>
+            <p>Unformatted B :{{b}} </p>
+
+            <p>A (simple): {{a | currency}}</p>
+            <p>B (simple): {{b | currency}}</p>
+
+
+            <p>A (currency:'INR'): {{a | currency:'INR'}}</p>
+            <p>B (currency:'INR'): {{b | currency:'INR'}}</p>
+
+
+            <p>A(currency:'INR':'code'): {{a | currency:'INR':'code'}}</p>
+            <p>B(currency:'INR':'code'): {{b | currency:'INR':'code'}}</p>
+
+
+            <p>A(currency:'INR':'symbol':'4.2-2'): {{a | currency:'INR':'symbol':'4.2-2'}}</p>
+            <p>B(currency:'INR':'symbol':'4.2-2'): {{b | currency:'INR':'symbol':'4.2-2'}}</p>
+
+            <p>A(currency:'INR':'symbol-narrow':'4.2-2'): {{a | currency:'INR':'symbol-narrow':'4.2-2'}}</p>
+            <p>B(currency:'INR':'symbol-narrow':'4.2-2'): {{b | currency:'INR':'symbol-narrow':'4.2-2'}}</p>
+
+            <p>A(currency:'INR':'symbol':'4.2-2':'fr'): {{a | currency:'INR':'symbol':'4.2-2':'fr'}}</p>
+            <p>B(currency:'INR':'symbol':'4.2-2':'fr'): {{b | currency:'INR':'symbol':'4.2-2':'fr'}}</p>
+
+            <p>B(currency:'CLP') : {{b | currency:'CLP'}}</p>
+        </div>
+    </div>
+
+</div>

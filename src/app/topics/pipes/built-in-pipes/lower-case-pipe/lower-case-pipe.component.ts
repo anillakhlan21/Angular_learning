@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lower-case-pipe.component.css']
 })
 export class LowerCasePipeComponent implements OnInit {
-
+  msg: string= 'Welcome to Angular';
   constructor() { }
 
   ngOnInit(): void {

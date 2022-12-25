@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./number-pipe.component.css']
 })
 export class NumberPipeComponent implements OnInit {
-
+  num: number= 9542.14554;
   constructor() { }
 
   ngOnInit(): void {

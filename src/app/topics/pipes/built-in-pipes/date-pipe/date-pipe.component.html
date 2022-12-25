@@ -3,51 +3,182 @@
     <div class="m-3 p-3 border border-primary">
         <h3>How to use Pipe</h3>
         <div>
-            <p> Unformatted date : {{toDate }} </p>
-            <p> Formatted date : {{toDate | date}} </p>
+            <p>Unformatted date : {{ toDate }}</p>
+            <p>Formatted date : {{ toDate | date }}</p>
         </div>
     </div>
     <!-- --------Passing arguments to pipes-------------------------------------------------------------------- -->
     <div class="m-3 p-3 border border-primary">
         <h3>Passing arguments to pipes</h3>
         <div>
-            <p> Formatted date without arguments : {{toDate | date}} </p>
-            <p> Formatted date with arguments : {{toDate | date:'medium'}} </p>
+            <p>Formatted date without arguments : {{ toDate | date }}</p>
+            <p>Formatted date with arguments : {{ toDate | date : "medium" }}</p>
         </div>
     </div>
     <!-- --------Chaining Pipes-------------------------------------------------------------------- -->
     <div class="m-3 p-3 border border-primary">
         <h3>Chaining Pipes</h3>
         <div>
-            <p> Chaining multiple pipes: {{toDate | date | uppercase}} </p>
+            <p>Chaining multiple pipes: {{ toDate | date | uppercase }}</p>
         </div>
     </div>
     <!-- --------Predefined commonly used formats-------------------------------------------------------------------- -->
     <div class="m-3 p-3 border border-primary">
         <h3>Predefined commonly used formats</h3>
         <div>
-            <p> medium : {{toDate | date:'medium'}} </p>
-            <p> short : {{toDate | date:'short'}} </p>
-            <p> fullDate : {{toDate | date:'fullDate'}} </p>
-            <p> longDate : {{toDate | date:'longDate'}} </p>
-            <p> mediumDate : {{toDate | date:'mediumDate'}} </p>
-            <p> shortDate : {{toDate | date:'shortDate'}} </p>
-            <p> mediumTime : {{toDate | date:'mediumTime'}} </p>
-            <p> shortTime : {{toDate | date:'shortTime'}} </p>
+            <p>medium : {{ toDate | date : "medium" }}</p>
+            <p>short : {{ toDate | date : "short" }}</p>
+            <p>fullDate : {{ toDate | date : "fullDate" }}</p>
+            <p>longDate : {{ toDate | date : "longDate" }}</p>
+            <p>mediumDate : {{ toDate | date : "mediumDate" }}</p>
+            <p>shortDate : {{ toDate | date : "shortDate" }}</p>
+            <p>mediumTime : {{ toDate | date : "mediumTime" }}</p>
+            <p>shortTime : {{ toDate | date : "shortTime" }}</p>
         </div>
     </div>
     <!-- --------Formats-------------------------------------------------------------------- -->
     <div class="m-3 p-3 border border-primary">
         <h3>Formats</h3>
+        <h6>Date: {{ toDate }}</h6>
+        <hr>
         <div>
-            <p> medium : {{toDate | date:'medium'}} </p>
-            <p> short : {{toDate | date:'short'}} </p>
-            <p> fullDate : {{toDate | date:'fullDate'}} </p>
-            <p> longDate : {{toDate | date:'longDate'}} </p>
-            <p> mediumDate : {{toDate | date:'mediumDate'}} </p>
-            <p> shortDate : {{toDate | date:'shortDate'}} </p>
-            <p> mediumTime : {{toDate | date:'mediumTime'}} </p>
-            <p> shortTime : {{toDate | date:'shortTime'}} </p>
+            <h5>Era</h5>
+            <p>Abbreviated G: {{toDate | date:'G'}}</p>
+            <p>Abbreviated GGG:{{toDate | date:'GG'}}</p>
+            <p>Abbreviated GGG:{{toDate | date:'GGG'}}</p>
+            <p>Wide GGGG:{{toDate | date:'GGGG'}}</p>
+            <p>Narrow GGGGG:{{toDate | date:'GGGGG'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Year</h5>
+            <p>y : {{toDate | date:'y'}}</p>
+            <p>yy :{{toDate | date:'yy'}}</p>
+            <p>yyy :{{toDate | date:'yyy'}}</p>
+            <p>yyyy :{{toDate | date:'yyyy'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Week-numbering year</h5>
+            <p>Y : {{toDate | date:'Y'}}</p>
+            <p>YY :{{toDate | date:'YY'}}</p>
+            <p>YYY :{{toDate | date:'YYY'}}</p>
+            <p>YYYY :{{toDate | date:'YYYY'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Month</h5>
+            <p>M : {{toDate | date:'M'}}</p>
+            <p>MM :{{toDate | date:'MM'}}</p>
+            <p>MMM :{{toDate | date:'MMM'}}</p>
+            <p>MMMM :{{toDate | date:'MMMM'}}</p>
+            <p>MMMMM :{{toDate | date:'MMMMM'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Month standalone</h5>
+            <p>L : {{toDate | date:'L'}}</p>
+            <p>LL :{{toDate | date:'LL'}}</p>
+            <p>LLL :{{toDate | date:'LLL'}}</p>
+            <p>LLLL :{{toDate | date:'LLLL'}}</p>
+            <p>LLLLL :{{toDate | date:'LLLLL'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Week of year</h5>
+            <p>w : {{toDate | date:'w'}}</p>
+            <p>ww :{{toDate | date:'ww'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Week of month</h5>
+            <p>W : {{toDate | date:'W'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Day of month</h5>
+            <p>d : {{toDate | date:'d'}}</p>
+            <p>dd : {{toDate | date:'dd'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Week day</h5>
+            <p>E, EE & EEE (Abbreviated) : {{toDate | date:'E'}}</p>
+            <p>EEEE Wide : {{toDate | date:'EEEE'}}</p>
+            <p>EEEEE Narrow : {{toDate | date:'EEEEE'}}</p>
+            <p>EEEEEE Short : {{toDate | date:'EEEEEE'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Week day standalone</h5>
+            <p>c, cc (Abbreviated) : {{toDate | date:'c'}}</p>
+            <p>ccc Wide : {{toDate | date:'ccc'}}</p>
+            <p>cccc wide: {{toDate | date:'cccc'}}</p>
+            <p>ccccc Narrow : {{toDate | date:'ccccc'}}</p>
+            <p>cccccc Short : {{toDate | date:'cccccc'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Period</h5>
+            <p>a, aa & aaa (Abbreviated) : {{toDate | date:'a'}}</p>
+            <p>aaaa Wide : {{toDate | date:'aaaa'}}</p>
+            <p>aaaaa Narrow : {{toDate | date:'aaaaa'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Period*</h5>
+            <!-- <p>B, BB & BBB (Abbreviated) : {{toDate | date:'BB'}}</p>
+            <p>BBBB Wide : {{toDate | date:'BBBB'}}</p>
+            <p>BBBBB Narrow : {{toDate | date:'BBBBB'}}</p> -->
+        </div>
+        <hr>
+        <div>
+            <h5>Period standalone*</h5>
+            <!-- <p>b, bb & bbb (Abbreviated) : {{toDate | date:'b'}}</p>
+            <p>bbbb Wide : {{toDate | date:'bbbb'}}</p>
+            <p>bbbbb Narrow : {{toDate | date:'bbbbb'}}</p> -->
+        </div>
+        <hr>
+        <div>
+            <h5>Hour 1-12</h5>
+            <p>h : {{toDate | date:'h'}}</p>
+            <p>hh : {{toDate | date:'hh'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Hour 0-23</h5>
+            <p>H : {{toDate | date:'H'}}</p>
+            <p>HH : {{toDate | date:'HH'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Minute</h5>
+            <p>m : {{toDate | date:'m'}}</p>
+            <p>mm : {{toDate | date:'mm'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Second</h5>
+            <p>s : {{toDate | date:'s'}}</p>
+            <p>ss : {{toDate | date:'s'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Fractional seconds</h5>
+            <p>S : {{toDate | date:'S'}}</p>
+            <p>SS : {{toDate | date:'SS'}}</p>
+            <p>SSS : {{toDate | date:'SSS'}}</p>
+        </div>
+        <hr>
+        <div>
+            <h5>Zone</h5>
+            <p>z, zz & zzz : {{toDate | date:'z'}}</p>
+            <p>zzzz : {{toDate | date:'zzzz'}}</p>
+            <p>Z, ZZ & ZZZ : {{toDate | date:'Z'}}</p>
+            <p>ZZZZ : {{toDate | date:'ZZZZ'}}</p>
+            <p>ZZZZZ : {{toDate | date:'ZZZZZ'}}</p>
+            <p>O, OO & OOO Short localized GMT format : {{toDate | date:'O'}}</p>
+            <p> OOOO Long localized GMT format : {{toDate | date:'OOOO'}}</p>
         </div>
     </div>
 </div>

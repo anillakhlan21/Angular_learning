@@ -1,5 +1,6 @@
 <div class="m-3 p-3 border border-primary">
     <h1>NgIf structural directive</h1>
+    <!-- --------Simple example of ngIf------------------------------------------- -->
     <div class="m-3 p-3 border border-secondary">
         <h3>Simple example of ngIf</h3>
         <input type="checkbox" id="abc" [(ngModel)]="condition1">
@@ -8,6 +9,8 @@
             content to render, when the condition is true
         </p>
     </div>
+
+    <!----------Hidden attribute Vs ngIf------------------------------------------- -->
     <div class="m-3 p-3 border border-secondary">
         <h3>Hidden attribute Vs ngIf</h3>
         <input type="checkbox" id="abc" [(ngModel)]="condition2">
@@ -16,6 +19,7 @@
             content to render, when the condition is true
         </p>
     </div>
+    <!----------ngIf else------------------------------------------- -->
     <div class="m-3 p-3 border border-secondary">
         <h3>ngIf else</h3>
         <input type="checkbox" id="abc" [(ngModel)]="condition3">
@@ -30,6 +34,7 @@
             </div>
         </ng-template>
     </div>
+    <!----------ngIf then else------------------------------------------- -->
     <div class="m-3 p-3 border border-secondary">
         <h3>ngIf then else</h3>
         <input type="checkbox" id="abc" [(ngModel)]="condition4">

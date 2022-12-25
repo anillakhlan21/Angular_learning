@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./currency-pipe.component.css']
 })
 export class CurrencyPipeComponent implements OnInit {
-
+  a: number = 0.259;
+  b: number = 1.3495;
   constructor() { }
 
   ngOnInit(): void {

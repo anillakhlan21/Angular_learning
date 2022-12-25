@@ -25,14 +25,14 @@ import { NgAfteViewInitComponent } from './topics/life-cycle-hooks/hooks/ngAfteV
 import { NgAfterViewCheckedComponent } from './topics/life-cycle-hooks/hooks/ngAfterViewChecked/ngAfterViewChecked.component';
 import { ChildEComponent } from './topics/life-cycle-hooks/hooks/ngOnDestroy/child-e/child-e.component';
 import { NgOnDestroyComponent } from './topics/life-cycle-hooks/hooks/ngOnDestroy/ngOnDestroy.component';
-import { TheoryComponent } from './topics/Directives/theory/theory.component';
-import { ComponentDirectiveComponent } from './topics/Directives/component-directive/component-directive.component';
-import { NgIfDirectiveComponent } from './topics/Directives/Structural-Directives/ng-if-directive/ng-if-directive.component';
-import { NgForDirectiveComponent } from './topics/Directives/Structural-Directives/ng-for-directive/ng-for-directive.component';
-import { NgSwitchCaseDirectiveComponent } from './topics/Directives/Structural-Directives/ng-switch-case-directive/ng-switch-case-directive.component';
-import { NgStyleDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-style-directive/ng-style-directive.component';
-import { NgClassDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-class-directive/ng-class-directive.component';
-import { NgModelDirectiveComponent } from './topics/Directives/Attribute-Directives/ng-model-directive/ng-model-directive.component';
+import { TheoryComponent } from './topics/directives/theory/theory.component';
+import { ComponentDirectiveComponent } from './topics/directives/component-directive/component-directive.component';
+import { NgIfDirectiveComponent } from './topics/directives/Structural-Directives/built-in/ng-if-directive/ng-if-directive.component';
+import { NgForDirectiveComponent } from './topics/directives/Structural-Directives/built-in/ng-for-directive/ng-for-directive.component';
+import { NgSwitchCaseDirectiveComponent } from './topics/directives/Structural-Directives/built-in/ng-switch-case-directive/ng-switch-case-directive.component';
+import { NgStyleDirectiveComponent } from './topics/directives/Attribute-Directives/built-in/ng-style-directive/ng-style-directive.component';
+import { NgClassDirectiveComponent } from './topics/directives/Attribute-Directives/built-in/ng-class-directive/ng-class-directive.component';
+import { NgModelDirectiveComponent } from './topics/directives/Attribute-Directives/built-in/ng-model-directive/ng-model-directive.component';
 import { PipeTheoryComponent } from './topics/pipes/pipe-theory/pipe-theory.component';
 import { DatePipeComponent } from './topics/pipes/built-in-pipes/date-pipe/date-pipe.component';
 import { UpperCasePipeComponent } from './topics/pipes/built-in-pipes/upper-case-pipe/upper-case-pipe.component';
@@ -42,6 +42,19 @@ import { NumberPipeComponent } from './topics/pipes/built-in-pipes/number-pipe/n
 import { PercentPipeComponent } from './topics/pipes/built-in-pipes/percent-pipe/percent-pipe.component';
 import { CurrencyPipeComponent } from './topics/pipes/built-in-pipes/currency-pipe/currency-pipe.component';
 
+
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+import { JsonPipeComponent } from './topics/pipes/built-in-pipes/json-pipe/json-pipe.component';
+import { AsyncPipeComponent } from './topics/pipes/built-in-pipes/async-pipe/async-pipe.component';
+import { TitleCasePipeComponent } from './topics/pipes/built-in-pipes/title-case-pipe/title-case-pipe.component';
+import { HostBindingComponent } from './topics/directives/Attribute-Directives/custom/host-binding/host-binding.component';
+import { HostListnerComponent } from './topics/directives/Attribute-Directives/custom/host-listner/host-listner.component';
+import { AccessibilityHelperComponent } from './topics/directives/Attribute-Directives/custom/accessibility-helper/accessibility-helper.component';
+import { ImageZoomComponent } from './topics/directives/Attribute-Directives/custom/image-zoom/image-zoom.component';
+import { DraggableElementComponent } from './topics/directives/Attribute-Directives/custom/draggable-element/draggable-element.component';
+import { CollapsibleElementComponent } from './topics/directives/Attribute-Directives/custom/collapsible-element/collapsible-element.component';
+registerLocaleData(localeFr);
 
 @NgModule({
   declarations: [
@@ -82,7 +95,16 @@ import { CurrencyPipeComponent } from './topics/pipes/built-in-pipes/currency-pi
     SlicePipeComponent,
     NumberPipeComponent,
     PercentPipeComponent,
-    CurrencyPipeComponent
+    CurrencyPipeComponent,
+    JsonPipeComponent,
+    AsyncPipeComponent,
+    TitleCasePipeComponent,
+    HostBindingComponent,
+    HostListnerComponent,
+    AccessibilityHelperComponent,
+    ImageZoomComponent,
+    DraggableElementComponent,
+    CollapsibleElementComponent
   ],
   imports: [
     BrowserModule,

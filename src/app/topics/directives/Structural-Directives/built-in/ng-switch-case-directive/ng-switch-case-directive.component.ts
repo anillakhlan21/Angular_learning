@@ -15,5 +15,4 @@ export class NgSwitchCaseDirectiveComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
