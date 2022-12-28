@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LifeCycleHooksComponent } from './topics/life-cycle-hooks/life-cycle-hooks.component';
 import { DataBindingComponent } from './topics/data-binding/data-binding.component';
-import { FormsComponent } from './topics/forms/forms.component';
 import { ComponentCommunicationComponent } from './topics/component-communication/component-communication.component';
 import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
 import { HttpComponent } from './topics/http/http.component';
@@ -53,6 +52,9 @@ import { PluralPipe } from './topics/pipes/custom/pluralization/plural.pipe';
 import { CustomAttributeDirectivesComponent } from './topics/directives/attribute-directives/custom/custom-attribute-directives/custom-attribute-directives.component';
 import { CustomStructuralDirectivesComponent } from './topics/directives/structural-directives/custom/custom-structural-directives/custom-structural-directives.component';
 import { ImageZoomDirective } from './topics/directives/attribute-directives/custom/image-zoom/image-zoom.directive';
+import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.component';
+import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
+import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
 
 registerLocaleData(localeFr);
 
@@ -63,7 +65,6 @@ registerLocaleData(localeFr);
     DashboardComponent,
     LifeCycleHooksComponent,
     DataBindingComponent,
-    FormsComponent,
     ComponentCommunicationComponent,
     ServicesDependencyComponent,
     HttpComponent,
@@ -104,6 +105,9 @@ registerLocaleData(localeFr);
     CustomAttributeDirectivesComponent,
     CustomStructuralDirectivesComponent,
     ImageZoomDirective,
+    FormsTheoryComponent,
+    ReactiveFormsComponent,
+    TemplateDrivenFormsComponent,
   ],
   imports: [
     BrowserModule,

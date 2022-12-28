@@ -1,0 +1,88 @@
+<div class="m-3 p-3 border border-primary">
+    <div>
+        <div>
+            <h1>Forms Module</h1>
+            <h5>Some things forms are expected to do</h5>
+            <ul>
+                <li>Initialize the forms fields and present it to the user</li>
+                <li>Capture the data from the user</li>
+                <li>Track changes made to the fields</li>
+                <li>Validate the inputs</li>
+                <li>Display helpful errors to the user</li>
+            </ul>
+        </div>
+        <div>
+            <h5>Angular Forms Module</h5>
+            <p> Angular forms module provides all the above services out of the box. </p>
+            <ol>
+                <li>It binds the form field to the Angular component class.</li>
+                <li> It tracks changes made to the form fields so that we can respond accordingly. </li>
+                <li> The Angular forms provide the built-in validators to validate the inputs. </li>
+                <li>You can create your own custom validator.</li>
+                <li>It presents the validation errors to the user.</li>
+                <li> Finally, it encapsulates all the input fields into an object structure when the user submits the form.
+                </li>
+            </ol>
+        </div>
+    </div>
+    <div>
+        <div>
+            <h1>Template-Driven Forms</h1>
+            <p> In Template-driven approach is the easiest way to build the Angular forms. The logic of the form is placed in the template. </p>
+            <p> In Template Driven Forms we specify behaviors/validations using directives and attributes in our template and let it work behind the scenes. All things happen in Templates hence very little code is required in the component class. This is
+                different from the reactive forms, where we define the logic and controls in the component class. </p>
+        </div>
+        <div>
+            <h6>Template driven forms</h6>
+            <ol>
+                <li>The form is set up using ngForm directive</li>
+                <li>controls are set up using the ngModel directive</li>
+                <li>ngModel also provides the two-way data binding</li>
+                <li>The Validations are configured in the template via directives</li>
+            </ol>
+        </div>
+        <div>
+            <h6>Advantages</h6>
+            <ol>
+                <li>Contains little code in the component class</li>
+                <li>Easier to set up</li>
+            </ol>
+        </div>
+        <div>
+            <h6>Disadvantages</h6>
+            <ol>
+                <li>Difficult to add controls dynamically</li>
+                <li>Unit testing is a challenge</li>
+            </ol>
+        </div>
+        <div>
+            <h6>Step 1 (Only time you have to do)</h6>
+            <p>NOTE:: To work with Template-driven forms, we must import the FormsModule. We usually import it in root module or in a shared module. The FormsModule contains all the form directives and constructs for working with forms</p>
+            <h6>Step 2 (HTML Form)</h6>
+            <p>The first task is to build the template. The following is a regular HTML <code>form</code>. We enclose it in a <code>&lt;form&gt;</code> tag. We have included two text input (FirstName &amp; LastName), a email (email), a radio button (gender),
+                a checkbox (isMarried), and a select list (country). These are form elements.</p>
+            <h6>Step 3 (ngForm Directive)</h6>
+            <p>Once, we have a form with few form elements, the angular automatically converts it into a Template-driven form. This is done by the ngForm directive.</p>
+            <p>The ngForm directive is what makes the Angular template-driven forms work. But we do not need to add it explicitly. Angular adds it automatically</p>
+            <p>When we include&nbsp;<code>FormsModule</code>, the Angular is going to look out for any&nbsp;<code>&lt;form&gt;</code>&nbsp;tag in our HTML template. Angular does this via&nbsp;<code>ngForm</code> <a href="https://www.tektutorialshub.com/angular/angular-directives/">directive</a>.
+                <code>ngForm</code> directive automatically detects the <code>&lt;form&gt;</code> tag and automatically binds to it. You do not have to do anything on your part to invoke and bind the&nbsp;<code>ngForm</code>&nbsp;directive.</p>
+            <h6>The ngForm does the following</h6>
+            <ol>
+                <li>Binds itself to the <code>&lt;Form&gt;</code> directive</li>
+                <li>Creates a top-level <code>FormGroup</code> instance</li>
+                <li>Creates<code>FormControl</code> instance for each of child control, which has <code>ngModel</code> directive.</li>
+                <li>Creates<code>FormGroup</code> instance for each of the &nbsp;<code>NgModelGroup</code> directive.</li>
+            </ol>
+            <p>We can export the ngForm instance into a local template variable using ngForm as the key (ex: #contactForm="ngForm"). This allows us to access the many properties and methods of ngForm using the template variable contactForm</p>
+            <h6>Step 4 (FormControl)</h6>
+            <p>The FormControl is the basic building block of the Angular Forms. It represents a single input field in an Angular form. The Angular Forms Module binds the input element to a FormControl. We use the FormControl instance to track the value,
+                user interaction and validation status of an individual form element. Each individual Form element is a FormControl</p>
+            <p>We have six form elements in our HTML template. They are firstName, lastname, email, gender, isMarried & country. We need to bind them to FormControl instance. We do this by using the ngModel directive. Add the ngModel directive to each control</p>
+            <p>NOTE:: ngModel will use the name attribute to create the FormControl instance for each of the Form field it is attached.</p>
+            <h6>Step 5 (ngModel will use the name attribute to create the FormControl instance for each of the Form field it is attached.)</h6>
+            <p>Now have the template ready, except for the final piece i.e submitting data to the component. We use the ngSubmit event, to submit the form data to the component class. We use the event binding (parentheses) to bind ngSubmit to OnSubmit method
+                in the component class. When the user clicks on the submit button, the ngSubmit event will fire</p>
+            <div><span>&lt;</span><span>form</span><span> </span><span> #contactForm="ngForm " (ngSubmit)="onSubmit(contactForm) "&gt;</span></div>
+        </div>
+    </div>
+</div>

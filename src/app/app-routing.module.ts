@@ -34,6 +34,9 @@ import { NgSwitchCaseDirectiveComponent } from './topics/directives/structural-d
 import { CustomPipesComponent } from './topics/pipes/custom/custom-pipes/custom-pipes.component';
 import { CustomAttributeDirectivesComponent } from './topics/directives/attribute-directives/custom/custom-attribute-directives/custom-attribute-directives.component';
 import { CustomStructuralDirectivesComponent } from './topics/directives/structural-directives/custom/custom-structural-directives/custom-structural-directives.component';
+import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.component';
+import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
+import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
 
 const routes: Routes = [
   {
@@ -124,7 +127,7 @@ const routes: Routes = [
               path: 'custom',
               component: CustomStructuralDirectivesComponent
             }
-          ]
+            ]
           },
           {
             path: 'attribute',
@@ -207,6 +210,23 @@ const routes: Routes = [
             component: CustomPipesComponent
           }
 
+        ]
+      },
+      {
+        path: 'forms',
+        children: [
+          {
+            path: 'theory',
+            component: FormsTheoryComponent
+          },
+          {
+            path: 'reactive-forms',
+            component: ReactiveFormsComponent,
+          },
+          {
+            path: 'template-driven-forms',
+            component: TemplateDrivenFormsComponent,
+          }
         ]
       }
     ]
