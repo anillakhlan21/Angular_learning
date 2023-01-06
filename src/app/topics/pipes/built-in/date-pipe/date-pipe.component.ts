@@ -1,4 +1,4 @@
-import { registerLocaleData } from '@angular/common';
+import { DatePipe, registerLocaleData } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import localeEn from '@angular/common/locales/en';
 registerLocaleData(localeEn);
@@ -9,7 +9,10 @@ registerLocaleData(localeEn);
 })
 export class DatePipeComponent implements OnInit {
   toDate: Date = new Date('04/06/2020 13:05:09');
-  constructor() { }
+  formattedFromComponent: string | null='';
+  constructor(private _datePipe: DatePipe) {
+    this.formattedFromComponent = this._datePipe.transform(new Date(this.toDate),'yyyy-MM-dd')
+  }
 
   ngOnInit(): void {
   }

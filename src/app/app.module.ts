@@ -43,7 +43,7 @@ import { PercentPipeComponent } from './topics/pipes/built-in/percent-pipe/perce
 import { CurrencyPipeComponent } from './topics/pipes/built-in/currency-pipe/currency-pipe.component';
 
 
-import { registerLocaleData } from '@angular/common';
+import { DatePipe, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { JsonPipeComponent } from './topics/pipes/built-in/json-pipe/json-pipe.component';
 import { AsyncPipeComponent } from './topics/pipes/built-in/async-pipe/async-pipe.component';
@@ -53,6 +53,7 @@ import { PluralPipe } from './topics/pipes/custom/pluralization/plural.pipe';
 import { CustomAttributeDirectivesComponent } from './topics/directives/attribute-directives/custom/custom-attribute-directives/custom-attribute-directives.component';
 import { CustomStructuralDirectivesComponent } from './topics/directives/structural-directives/custom/custom-structural-directives/custom-structural-directives.component';
 import { ImageZoomDirective } from './topics/directives/attribute-directives/custom/image-zoom/image-zoom.directive';
+import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
 
 registerLocaleData(localeFr);
 
@@ -104,6 +105,7 @@ registerLocaleData(localeFr);
     CustomAttributeDirectivesComponent,
     CustomStructuralDirectivesComponent,
     ImageZoomDirective,
+    KeyValuePipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,7 +113,7 @@ registerLocaleData(localeFr);
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
