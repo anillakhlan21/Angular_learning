@@ -34,6 +34,7 @@ import { NgSwitchCaseDirectiveComponent } from './topics/directives/structural-d
 import { CustomPipesComponent } from './topics/pipes/custom/custom-pipes/custom-pipes.component';
 import { CustomAttributeDirectivesComponent } from './topics/directives/attribute-directives/custom/custom-attribute-directives/custom-attribute-directives.component';
 import { CustomStructuralDirectivesComponent } from './topics/directives/structural-directives/custom/custom-structural-directives/custom-structural-directives.component';
+import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
 
 const routes: Routes = [
   {
@@ -201,6 +202,10 @@ const routes: Routes = [
           {
             path: 'async-pipe',
             component: AsyncPipeComponent
+          },
+          {
+            path: 'keyValue-pipe',
+            component: KeyValuePipeComponent
           },
           {
             path: 'custom',
