@@ -1,1 +1,258 @@
-<div class="p-3 m-3 border border-primary"></div>
+<div class="p-3 m-3 border border-primary">
+    <h1>Template Driven Forms</h1>
+    <!-- simple template-driven form  -->
+    <div class="p-3 m-3 border border-primary">
+        <h3>Simple Template Driven Forms</h3>
+        <form #userForm="ngForm" (ngSubmit)="onSubmitForm(userForm)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" ngModel required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" ngModel required />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" ngModel required />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                    <input type="radio" value="male" id="gender" name="gender" class="form-check-input" ngModel required />
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="female" id="gender" name="gender" class="form-check-input" ngModel required />
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" ngModel />
+                    <label class="form-check-label" for="isMarried">Married</label>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="country">Country</label>
+                <select name="country" id="country" class="form-control" ngModel required>
+          <option selected="" value=""></option>
+          <option [ngValue]="c.id" *ngFor="let c of countryList">
+            {{ c.name }}
+          </option>
+        </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- nested template driven forms  -->
+    <div class="p-3 m-3 border border-primary">
+        <h3>Nested FormGroup</h3>
+        <form #userNestedForm="ngForm" (ngSubmit)="onSubmitForm(userNestedForm)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" ngModel required />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" ngModel required />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" ngModel required />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                    <input type="radio" value="male" id="gender" name="gender" class="form-check-input" ngModel required />
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="female" id="gender" name="gender" class="form-check-input" ngModel required />
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" ngModel />
+                    <label class="form-check-label" for="isMarried">Married</label>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="country">Country</label>
+                <select name="country" id="country" class="form-control" ngModel required>
+          <option selected="" value=""></option>
+          <option [ngValue]="c.id" *ngFor="let c of countryList">
+            {{ c.name }}
+          </option>
+        </select>
+            </div>
+            <div ngModelGroup="address">
+                <p class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input class="form-control" type="text" name="city" ngModel />
+                </p>
+
+                <p class="form-group col-md-6">
+                    <label for="street">Street</label>
+                    <input class="form-control" type="text" name="street" ngModel />
+                </p>
+                <p class="form-group col-md-6">
+                    <label for="pincode">Pin Code</label>
+                    <input class="form-control" type="text" name="pincode" ngModel />
+                </p>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <!-- intial value setting -->
+    <div class="p-3 m-3 border border-primary">
+        <h3>Setting the Default/Initial Value and Reset feature</h3>
+        <!-- Using Two-way data binding----------------------------------->
+        <div class="p-3 m-3 border border-primary">
+            <h3>Using Two-way data binding</h3>
+            <form #userTwoWayForm="ngForm" (ngSubmit)="onSubmitForm(userTwoWayForm)">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" class="form-control" [(ngModel)]="user.firstname" required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" class="form-control" [(ngModel)]="user.lastname" required />
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" class="form-control" [(ngModel)]="user.email" required />
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <div class="form-check">
+                        <input type="radio" value="male" id="gender" name="gender " class="form-check-input" [(ngModel)]="user.gender" required />
+                        <label class="form-check-label" for="gender">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" value="female" id="gender" name="gender" class="form-check-input" [(ngModel)]="user.gender" required />
+                        <label class="form-check-label" for="gender ">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" [(ngModel)]="user.isMarried" />
+                        <label class="form-check-label" for="isMarried">Married</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="country">Country</label>
+                    <select name="country" id="country" class="form-control" [(ngModel)]="user.country" required>
+            <option selected=" " value=" "></option>
+            <option [ngValue]="c.id" *ngFor="let c of countryList">
+              {{ c.name }}
+            </option>
+          </select>
+                </div>
+                <div ngModelGroup="address">
+                    <p class="form-group col-md-6">
+                        <label for="city">City</label>
+                        <input class="form-control" type="text" name="city" [(ngModel)]="user.address.city" />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="street ">Street</label>
+                        <input class="form-control" type="text " name="street " [(ngModel)]="user.address.street" />
+                    </p>
+                    <p class="form-group col-md-6">
+                        <label for="pincode">Pin Code</label>
+                        <input class="form-control" type="text" name="pincode" [(ngModel)]="user.address.pincode" />
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" (click)="reset(userTwoWayForm)" class="btn btn-danger" style="margin-left: 15px">
+          Reset
+        </button>
+            </form>
+        </div>
+        <!-- Using Template reference variable------------------------------>
+        <div class="p-3 m-3 border border-primary">
+            <h3>Using Template reference variable</h3>
+            <form #userTemplateRefForm="ngForm" (ngSubmit)="onSubmitForm(userTemplateRefForm)">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" class="form-control" ngModel required />
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" class="form-control" ngModel required />
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" class="form-control" ngModel required />
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <div class="form-check">
+                        <input type="radio" value="male" id="gender" name="gender" class="form-check-input" ngModel required />
+                        <label class="form-check-label" for="gender ">Male</label>
+                    </div>
+                    <div class="form-check">
+                        <input type="radio" value="female" id="gender" name="gender" class="form-check-input" ngModel required />
+                        <label class="form-check-label" for="gender">Female</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-check">
+                        <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" ngModel />
+                        <label class="form-check-label" for="isMarried">Married</label>
+                    </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="country">Country</label>
+                    <select name="country" id="country " class="form-control" ngModel required>
+            <option selected=" " value=" "></option>
+            <option [ngValue]="c.id" *ngFor="let c of countryList">
+              {{ c.name }}
+            </option>
+          </select>
+                </div>
+                <div ngModelGroup="address">
+                    <p class="form-group col-md-6">
+                        <label for="city">City</label>
+                        <input class="form-control" type="text" name="city" ngModel />
+                    </p>
+
+                    <p class="form-group col-md-6">
+                        <label for="street">Street</label>
+                        <input class="form-control" type="text" name="street" ngModel />
+                    </p>
+                    <p class="form-group col-md-6">
+                        <label for="pincode">Pin Code</label>
+                        <input class="form-control" type="text" name="pincode" ngModel />
+                    </p>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type=" button" [ngStyle]="{ 'margin-left': '15px' }" (click)="reset(userTemplateRefForm) " class="btn btn-danger ">Reset</button>
+                <button type="button" (click)="setDefaultValue() " class="btn btn-secondary " [ngStyle]="{ 'margin-left': '15px' } ">Set Default Value</button>
+                <button type=" button" [ngStyle]="{ 'margin-left': '15px' }" (click)="patch() " class="btn btn-info ">Patch Value</button>
+                <button type=" button" [ngStyle]="{ 'margin-left': '15px' }" (click)="changeAddress() " class="btn btn-warning ">Set Value of Nested FormGroup</button>
+
+            </form>
+            <div class="mt-3 d-flex justify-between justify-content-between">
+                <p><b>valid : </b> {{ userTemplateRefForm.valid}}</p>
+                <p> <b>touched : </b> {{ userTemplateRefForm.touched}}</p>
+                <p> <b>pristine : </b> {{ userTemplateRefForm.pristine}}</p>
+                <p> <b>dirty : </b> {{ userTemplateRefForm.dirty}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="p-3 m-3 border border-info">
+        <h3>Validating Form</h3>
+        <app-template-form-validation></app-template-form-validation>
+    </div>
+</div>

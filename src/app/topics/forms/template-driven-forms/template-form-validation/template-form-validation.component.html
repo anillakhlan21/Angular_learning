@@ -1,0 +1,46 @@
+<div class="p-3 m-3 border border-info">
+    <span class="badge badge-info bg-primary">#novalidate</span>
+    <div class="p-3 m-3 border border-info">
+        <h3>Built-in Validators</h3>
+        <div class="p-3 m-3 border border-info">
+            <h3>Required, Minlength, Maxlength,Pattern,Email Validation</h3>
+        </div>
+
+
+    </div>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+        <p>
+            <label for="firstname">First Name </label>
+            <input type="text" id="firstname" name="firstname" class="form-control" [(ngModel)]="contact.firstname">
+        </p>
+        <p>
+            <label for="lastname">Last Name </label>
+            <input type="text" id="lastname" name="lastname" class="form-control" [(ngModel)]="contact.lastname">
+        </p>
+        <p>
+            <label for="email">email </label>
+            <input type="text" id="email" name="email" class="form-control" [(ngModel)]="contact.email">
+        </p>
+        <span>
+            <label for="gender">Geneder </label>
+            <div class="form-check">
+                <input type="radio" value="male" id="gender" name="gender" class="form-check-input" [(ngModel)]="contact.gender">
+                <label class="form-check-label" for="gender">Male</label>
+            </div>
+            <div class="form-check">
+                <input type="radio" value="female" id="gender" name="gender" class="form-check-input" [(ngModel)]="contact.gender">
+                <label class="form-check-label" for="gender">Female</label>
+            </div>
+        </span>
+        <span>
+            <div class="form-check">
+                <input type="checkbox" id="isToc" name="isToc" class="form-check-input" [(ngModel)]="contact.isToc">
+                <label class="form-check-label" for="isToc">Accept TOC</label>
+            </div>
+        </span>
+        <p>
+            <button type="submit" class="btn btn-success mt-3">Submit</button>
+        </p>
+    </form>
+
+</div>

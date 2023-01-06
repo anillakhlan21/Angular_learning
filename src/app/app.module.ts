@@ -55,6 +55,7 @@ import { ImageZoomDirective } from './topics/directives/attribute-directives/cus
 import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.component';
 import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
+import { TemplateFormValidationComponent } from './topics/forms/template-driven-forms/template-form-validation/template-form-validation.component';
 
 registerLocaleData(localeFr);
 
@@ -108,6 +109,7 @@ registerLocaleData(localeFr);
     FormsTheoryComponent,
     ReactiveFormsComponent,
     TemplateDrivenFormsComponent,
+    TemplateFormValidationComponent,
   ],
   imports: [
     BrowserModule,
