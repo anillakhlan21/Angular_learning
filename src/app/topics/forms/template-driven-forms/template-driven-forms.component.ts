@@ -67,7 +67,7 @@ export class TemplateDrivenFormsComponent implements OnInit {
 
 
    setDefaultValue(){
-    this.userTemplateRefForm.setValue(this.user1);  
+    this.userTemplateRefForm.setValue(this.user1);
 console.log(this.userTemplateRefForm.controls);
 
     // this.userTemplateRefForm.controls['firstname'].setValue("Anil");
@@ -104,8 +104,10 @@ console.log(this.userTemplateRefForm.controls);
     street: "Brigade Road",
     pincode: "600100"
   };
-  let address= this.userTemplateRefForm.controls["address"] as FormGroup
-  address.patchValue(obj);
+  // let address= this.userTemplateRefForm.controls["address"] as FormGroup
+   (<FormGroup>this.userTemplateRefForm.controls["address"]).patchValue(obj)
+
+  // address.patchValue(obj);
  }
 }
 

@@ -18,39 +18,61 @@
         <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
             <p>
                 <!-- reuired validatation & minlength------------- -->
-                <label for="firstname">First Name </label>
-                <input type="text" id="firstname" minlength="2" required name="firstname" class="form-control" [(ngModel)]="contact.firstname">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" minlength="2" required name="firstname" class="form-control" [(ngModel)]="contact.firstname" />
             </p>
             <!-- maxlength Validation && pattern validation------------------------- -->
             <p>
-                <label for="lastname">Last Name </label>
-                <input type="text" id="lastname" maxlength="5" pattern="^[a-zA-Z]+$" name="lastname" class="form-control" [(ngModel)]="contact.lastname">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" maxlength="5" pattern="^[a-zA-Z]+$" name="lastname" class="form-control" [(ngModel)]="contact.lastname" />
             </p>
             <!-- ---Email Validation-------------------------------------------------- -->
             <p>
-                <label for="email">email </label>
-                <input type="text" id="email" name="email" class="form-control" [(ngModel)]="contact.email">
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" email class="form-control" [(ngModel)]="contact.email" />
             </p>
 
             <span>
-            <label for="gender">Geneder </label>
-            <div class="form-check">
-                <input type="radio" value="male" id="gender" name="gender" class="form-check-input" [(ngModel)]="contact.gender">
-                <label class="form-check-label" for="gender">Male</label>
-            </div>
-            <div class="form-check">
-                <input type="radio" value="female" id="gender" name="gender" class="form-check-input" [(ngModel)]="contact.gender">
-                <label class="form-check-label" for="gender">Female</label>
-            </div>
-        </span>
+        <label for="gender">Geneder</label>
+        <div class="form-check">
+          <input
+            type="radio"
+            value="male"
+            id="gender"
+            name="gender"
+            class="form-check-input"
+            [(ngModel)]="contact.gender"
+          />
+          <label class="form-check-label" for="gender">Male</label>
+        </div>
+        <div class="form-check">
+          <input
+            type="radio"
+            value="female"
+            id="gender"
+            name="gender"
+            class="form-check-input"
+            [(ngModel)]="contact.gender"
+          />
+          <label class="form-check-label" for="gender">Female</label>
+        </div>
+      </span>
             <span>
-            <div class="form-check">
-                <input type="checkbox" id="isToc" name="isToc" class="form-check-input" [(ngModel)]="contact.isToc">
-                <label class="form-check-label" for="isToc">Accept TOC</label>
-            </div>
-        </span>
+        <div class="form-check">
+          <input
+            type="checkbox"
+            id="isToc"
+            name="isToc"
+            class="form-check-input"
+            [(ngModel)]="contact.isToc"
+          />
+          <label class="form-check-label" for="isToc">Accept TOC</label>
+        </div>
+      </span>
             <p>
-                <button [disabled]="!contactForm.valid" type="submit" class="btn btn-success mt-3">Submit</button>
+                <button [disabled]="!contactForm.valid" type="submit" class="btn btn-success mt-3">
+          Submit
+        </button>
             </p>
         </form>
     </div>
@@ -59,50 +81,85 @@
         <form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
             <p>
                 <!-- reuired validatation & minlength------------- -->
-                <label for="firstname">First Name </label>
-                <input type="text" id="firstname" minlength="2" required name="firstname" class="form-control" #firstname="ngModel" [(ngModel)]="contact.firstname">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" minlength="2" required name="firstname" class="form-control" #firstname="ngModel" [(ngModel)]="contact.firstname" />
                 <!-- Validation Error -->
-
             </p>
-            <!-- <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
-                Invalid First Name
-                <div *ngIf="firstname.errors['required']">
-                    First Name is required
+            <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)" class="text-danger">
+                <div *ngIf="firstname.errors?.required">First Name is required</div>
+                <div *ngIf="firstname.errors?.minlength">
+                    First Name Minimum Length is {{ firstname.errors?.minlength?.requiredLength }}
                 </div>
-                <div *ngIf="firstname.errors.minlength">
-                    First Name Minimum Length is {{firstname.errors.minlength?.requiredLength}}
-                </div>
-            </div> -->
+            </div>
             <!-- maxlength Validation && pattern validation------------------------- -->
             <p>
-                <label for="lastname">Last Name </label>
-                <input type="text" id="lastname" maxlength="5" pattern="^[a-zA-Z]+$" name="lastname" class="form-control" [(ngModel)]="contact.lastname">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" maxlength="5" pattern="^[a-zA-Z]+$" required name="lastname" class="form-control" #lastname="ngModel" [(ngModel)]="contact.lastname" />
             </p>
+            <div *ngIf="!lastname?.valid && (lastname?.dirty || lastname?.touched)" class="text-danger">
+                <div *ngIf="lastname.errors?.required">Last Name is required</div>
+                <div *ngIf="lastname.errors?.maxlength">
+                    Last Name Minimum Length is {{ lastname.errors?.maxlength?.requiredLength }}
+                </div>
+                <div *ngIf="lastname.errors?.pattern">Only characters are allowed</div>
+            </div>
             <!-- ---Email Validation-------------------------------------------------- -->
             <p>
-                <label for="email">email </label>
-                <input type="text" id="email" name="email" class="form-control" [(ngModel)]="contact.email">
+                <label for="email">email</label>
+                <input type="text" id="email" name="email" required email class="form-control" #email="ngModel" [(ngModel)]="contact.email" />
             </p>
 
+            <div *ngIf="!email?.valid && (email?.dirty || email?.touched)" class="text-danger">
+                <div *ngIf="email.errors?.required">Email is required</div>
+                <div *ngIf="email.errors?.email">Invalid Email Address</div>
+            </div>
+
             <span>
-        <label for="gender">Geneder </label>
+        <label for="gender">Geneder</label>
         <div class="form-check">
-            <input type="radio" value="male" id="gender" name="gender" class="form-check-input" [(ngModel)]="contact.gender">
-            <label class="form-check-label" for="gender">Male</label>
+          <input
+            type="radio"
+            value="male"
+            id="gender"
+            name="gender"
+            class="form-check-input"
+            [(ngModel)]="contact.gender"
+          />
+          <label class="form-check-label" for="gender">Male</label>
         </div>
         <div class="form-check">
-            <input type="radio" value="female" id="gender" name="gender" class="form-check-input" [(ngModel)]="contact.gender">
-            <label class="form-check-label" for="gender">Female</label>
+          <input
+            type="radio"
+            value="female"
+            id="gender"
+            name="gender"
+            class="form-check-input"
+            #gender="ngModel"
+            [(ngModel)]="contact.gender"
+          />
+          <label class="form-check-label" for="gender">Female</label>
         </div>
-    </span>
+      </span>
+            <div *ngIf="!gender?.valid && (gender?.dirty || gender?.touched)" class="error">
+                <div *ngIf="gender.errors?.required">Gender is required</div>
+            </div>
+
             <span>
         <div class="form-check">
-            <input type="checkbox" id="isToc" name="isToc" class="form-check-input" [(ngModel)]="contact.isToc">
-            <label class="form-check-label" for="isToc">Accept TOC</label>
+          <input
+            type="checkbox"
+            id="isToc"
+            name="isToc"
+            class="form-check-input"
+            [(ngModel)]="contact.isToc"
+          />
+          <label class="form-check-label" for="isToc">Accept TOC</label>
         </div>
-    </span>
+      </span>
             <p>
-                <button [disabled]="!contactForm.valid" type="submit" class="btn btn-success mt-3">Submit</button>
+                <button [disabled]="!contactForm.valid" type="submit" class="btn btn-success mt-3">
+          Submit
+        </button>
             </p>
         </form>
     </div>
