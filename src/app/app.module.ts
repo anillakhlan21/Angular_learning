@@ -42,7 +42,7 @@ import { PercentPipeComponent } from './topics/pipes/built-in/percent-pipe/perce
 import { CurrencyPipeComponent } from './topics/pipes/built-in/currency-pipe/currency-pipe.component';
 
 
-import { registerLocaleData } from '@angular/common';
+import { DatePipe, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { JsonPipeComponent } from './topics/pipes/built-in/json-pipe/json-pipe.component';
 import { AsyncPipeComponent } from './topics/pipes/built-in/async-pipe/async-pipe.component';
@@ -55,6 +55,7 @@ import { ImageZoomDirective } from './topics/directives/attribute-directives/cus
 import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.component';
 import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
+import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
 
 registerLocaleData(localeFr);
 
@@ -108,6 +109,7 @@ registerLocaleData(localeFr);
     FormsTheoryComponent,
     ReactiveFormsComponent,
     TemplateDrivenFormsComponent,
+    KeyValuePipeComponent,
   ],
   imports: [
     BrowserModule,
@@ -115,7 +117,7 @@ registerLocaleData(localeFr);
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

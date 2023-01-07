@@ -1,0 +1,14 @@
+<div class="m-3 p-3 border border-secondary">
+    <h1>keyValue Pipe</h1>
+    <div class="m-3 p-3 border border-info">
+        <h3>Use of keyValue pipe</h3>
+        <div>
+            <div *ngFor="let keyValuePair of object | keyvalue" class="card mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">{{keyValuePair.key}}</h5>
+                    <p class="card-text">{{keyValuePair.value}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -37,6 +37,7 @@ import { CustomStructuralDirectivesComponent } from './topics/directives/structu
 import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.component';
 import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
+import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
 
 const routes: Routes = [
   {
@@ -204,6 +205,10 @@ const routes: Routes = [
           {
             path: 'async-pipe',
             component: AsyncPipeComponent
+          },
+          {
+            path: 'keyValue-pipe',
+            component: KeyValuePipeComponent
           },
           {
             path: 'custom',
