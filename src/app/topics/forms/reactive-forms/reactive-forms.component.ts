@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-reactive-forms',
@@ -55,7 +55,8 @@ export class ReactiveFormsComponent implements OnInit {
         city: this.formBuilder.control(''),
         street: this.formBuilder.control(''),
         pincode: this.formBuilder.control(''),
-      })
+      }),
+      skills: this.formBuilder.array([])
     });
 
 this.contactForm3.get("firstname")?.valueChanges.subscribe(selectedValue => {
@@ -67,6 +68,16 @@ this.contactForm3.get("firstname")?.valueChanges.subscribe(selectedValue => {
 
   }
 
+  getSkills(){
+   return this.contactForm3.get('skills') as FormArray;
+  }
+
+  addSkill(){
+    (this.contactForm3.get("skills") as FormArray).push(this.formBuilder.group({
+      skill: this.formBuilder.control(''),
+      exp: this.formBuilder.control('')
+    }))
+  }
 
   setDefault() {
     let contact = {

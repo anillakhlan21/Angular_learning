@@ -174,13 +174,27 @@
 
 
             </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-            <button type="button" class="btn btn-danger ms-3" (click)="reset()">Reset</button>
-            <button type="button" class="btn btn-secondary ms-3" (click)="setAddress()">Set Address</button>
-            <button type="button" class="btn btn-primary ms-3" (click)="setCountry()">Set Country</button>
-            <button type="button" class="btn btn-warning ms-3" (click)="setDefault()">Set Default</button>
-            <button type="button" class="btn btn-dark ms-3" (click)="patchAddress()">Patch Address</button>
-            <button type="button" class="btn btn-light ms-3" (click)="patchName()">Patch Name</button>
+            <div formArrayName="skills" class="form-group border border-secondary m-2 p-3">
+                <div *ngFor="let skill of getSkills().controls">
+                    <div class="form-group col-md-6">
+                        <label class="form-check-label" for="isMarried">skill</label>
+                        <input class="form-control" type="text" formControlName="skill">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="form-check-label" for="isMarried">Exp</label>
+                        <input type="number" class="form-control" ormControlName="exp">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit " class="btn btn-success ">Submit</button>
+            <button type="button " class="btn btn-danger ms-3 " (click)="reset() ">Reset</button>
+            <button type="button " class="btn btn-secondary ms-3 " (click)="setAddress() ">Set Address</button>
+            <button type="button " class="btn btn-primary ms-3 " (click)="setCountry() ">Set Country</button>
+            <button type="button " class="btn btn-warning ms-3 " (click)="setDefault() ">Set Default</button>
+            <button type="button " class="btn btn-dark ms-3 " (click)="patchAddress() ">Patch Address</button>
+            <button type="button " class="btn btn-light ms-3 " (click)="patchName() ">Patch Name</button>
+            <button (click)="addSkill() " type="button " class="btn btn-secondary ms-3 ">Add Skill</button>
 
 
 
