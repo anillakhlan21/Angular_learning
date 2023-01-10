@@ -1,1 +1,218 @@
-<p>reactive-forms works!</p>
+<div class="m-3 p-3 border border-primary">
+    <h1>Reactive forms</h1>
+    <div class="m-3 p-3 border border-secondary">
+        <h3>Basic Use of Reactive form</h3>
+        <form [formGroup]="contactForm1" (ngSubmit)="onSubmit(1)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" formControlName="firstname" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" formControlName="lastname" />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                    <input type="radio" value="male" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="female" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" formControlName="isMarried" />
+                    <label class="form-check-label" for="isMarried">Married</label>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="country">Country</label>
+                <select name="country" id="country" class="form-control" formControlName="country">
+          <option selected="" value=""></option>
+          <option [ngValue]="c.id" *ngFor="let c of countryList"> {{ c.name }} </option>
+        </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="m-3 p-3 border border-info">
+        <h3>Nested FormGroup</h3>
+        <form [formGroup]="contactForm2" (ngSubmit)="onSubmit(2)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" formControlName="firstname" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" formControlName="lastname" />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                    <input type="radio" value="male" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="female" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" formControlName="isMarried" />
+                    <label class="form-check-label" for="isMarried">Married</label>
+                </div>
+            </div>
+
+            <div formGroupName="address" class="border border-info p-3 m-2">
+
+                <div class="form-group  col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" name="city" formControlName="city">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="street">Street</label>
+                    <input type="text" class="form-control" name="street" formControlName="street">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="pincode">Pin Code</label>
+                    <input type="text" class="form-control " name="pincode" formControlName="pincode">
+                </div>
+
+                <p class="form-group col-md-6">
+                    <label for="country  col-md-6">country </label>
+                    <select id="country" class="form-control " name="country" formControlName="country">
+                  <option value="1">India</option>
+                  <option value="2">USA</option>
+                  <option value="3">England</option>
+                  <option value="4">Singapore</option>
+                </select>
+                </p>
+
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="m-3 p-3 border border-info">
+        <h3>Using Angular FormBuilder to build Forms</h3>
+        <form [formGroup]="contactForm3" (ngSubmit)="onSubmit(2)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" formControlName="firstname" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" formControlName="lastname" />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                    <input type="radio" value="male" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="female" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" formControlName="isMarried" />
+                    <label class="form-check-label" for="isMarried">Married</label>
+                </div>
+            </div>
+            <p class="form-group col-md-6">
+                <label for="country  col-md-6">country </label>
+                <select id="country" class="form-control " name="country" formControlName="country">
+          <option value="1">India</option>
+          <option value="2">USA</option>
+          <option value="3">England</option>
+          <option value="4">Singapore</option>
+        </select>
+            </p>
+
+
+            <div formGroupName="address" class="border border-info p-3 m-2">
+
+                <div class="form-group  col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" name="city" formControlName="city">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="street">Street</label>
+                    <input type="text" class="form-control" name="street" formControlName="street">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="pincode">Pin Code</label>
+                    <input type="text" class="form-control " name="pincode" formControlName="pincode">
+                </div>
+
+
+            </div>
+            <div formArrayName="skills" class="form-group border border-secondary m-2 p-3">
+                <div *ngFor="let skill of getSkills().controls">
+                    <div class="form-group col-md-6">
+                        <label class="form-check-label" for="isMarried">skill</label>
+                        <input class="form-control" type="text" formControlName="skill">
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label class="form-check-label" for="isMarried">Exp</label>
+                        <input type="number" class="form-control" ormControlName="exp">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit " class="btn btn-success ">Submit</button>
+            <button type="button " class="btn btn-danger ms-3 " (click)="reset() ">Reset</button>
+            <button type="button " class="btn btn-secondary ms-3 " (click)="setAddress() ">Set Address</button>
+            <button type="button " class="btn btn-primary ms-3 " (click)="setCountry() ">Set Country</button>
+            <button type="button " class="btn btn-warning ms-3 " (click)="setDefault() ">Set Default</button>
+            <button type="button " class="btn btn-dark ms-3 " (click)="patchAddress() ">Patch Address</button>
+            <button type="button " class="btn btn-light ms-3 " (click)="patchName() ">Patch Name</button>
+            <button (click)="addSkill() " type="button " class="btn btn-secondary ms-3 ">Add Skill</button>
+
+
+
+
+        </form>
+        <div>
+            <h3>Form Status</h3>
+            <b>valid : </b>{{contactForm3.valid}}
+            <b>invalid : </b>{{contactForm3.invalid}}
+            <b>touched : </b>{{contactForm3.touched}}
+            <b>untouched : </b>{{contactForm3.untouched}}
+            <b>pristine : </b>{{contactForm3.pristine}}
+            <b>dirty : </b>{{contactForm3.dirty}}
+            <b>disabled : </b>{{contactForm3.disabled}}
+            <b>enabled : </b>{{contactForm3.enabled}}
+
+            <h3>Form Value</h3>
+            {{contactForm3.value |json}}
+        </div>
+    </div>
+</div>

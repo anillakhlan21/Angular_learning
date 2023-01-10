@@ -56,6 +56,7 @@ import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.c
 import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
 import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
+import { TemplateFormValidationComponent } from './topics/forms/template-driven-forms/template-form-validation/template-form-validation.component';
 
 registerLocaleData(localeFr);
 
@@ -110,12 +111,13 @@ registerLocaleData(localeFr);
     ReactiveFormsComponent,
     TemplateDrivenFormsComponent,
     KeyValuePipeComponent,
+    TemplateFormValidationComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [DatePipe],
   bootstrap: [AppComponent]
