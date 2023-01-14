@@ -10,7 +10,6 @@ import { DataBindingComponent } from './topics/data-binding/data-binding.compone
 import { ComponentCommunicationComponent } from './topics/component-communication/component-communication.component';
 import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
 import { HttpComponent } from './topics/http/http.component';
-import { RouterComponent } from './topics/router/router.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgOnChangesComponent } from './topics/life-cycle-hooks/hooks/ngOnChanges/ngOnChanges.component';
 import { ChildAComponent } from './topics/life-cycle-hooks/hooks/ngOnChanges/child-A/child-A.component'
@@ -57,6 +56,8 @@ import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-f
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
 import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
 import { TemplateFormValidationComponent } from './topics/forms/template-driven-forms/template-form-validation/template-form-validation.component';
+import { RoutingTheoryComponent } from './topics/routing/routing-theory/routing-theory.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 registerLocaleData(localeFr);
 
@@ -70,7 +71,6 @@ registerLocaleData(localeFr);
     ComponentCommunicationComponent,
     ServicesDependencyComponent,
     HttpComponent,
-    RouterComponent,
     NgOnChangesComponent,
     ChildAComponent,
     ChildBComponent,
@@ -112,6 +112,8 @@ registerLocaleData(localeFr);
     TemplateDrivenFormsComponent,
     KeyValuePipeComponent,
     TemplateFormValidationComponent,
+    RoutingTheoryComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

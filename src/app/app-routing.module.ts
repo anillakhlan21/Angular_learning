@@ -38,6 +38,8 @@ import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.c
 import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
 import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
+import { RoutingTheoryComponent } from './topics/routing/routing-theory/routing-theory.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
   {
@@ -233,9 +235,24 @@ const routes: Routes = [
             component: TemplateDrivenFormsComponent,
           }
         ]
+      },
+      {
+        path: 'routing',
+        children: [
+          {
+            path: 'theory',
+          component: RoutingTheoryComponent
+        }
+
+        ]
       }
     ]
-  }]
+  },
+  {
+    path: '**',
+    component: PageNotFoundComponent
+  }
+]
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
