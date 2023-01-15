@@ -58,6 +58,11 @@ import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/ke
 import { TemplateFormValidationComponent } from './topics/forms/template-driven-forms/template-form-validation/template-form-validation.component';
 import { RoutingTheoryComponent } from './topics/routing/routing-theory/routing-theory.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RHomeComponent } from './topics/routing/inner-routing/rhome/rhome.component';
+import { RContactComponent } from './topics/routing/inner-routing/rcontact/rcontact.component';
+import { RProductsComponent } from './topics/routing/inner-routing/rproducts/rproducts.component';
+import { InnerRoutingComponent } from './topics/routing/inner-routing/inner-routing.component';
+import { InnerAppRoutingModule } from './topics/routing/inner-routing/innerRouting.module';
 
 registerLocaleData(localeFr);
 
@@ -114,6 +119,7 @@ registerLocaleData(localeFr);
     TemplateFormValidationComponent,
     RoutingTheoryComponent,
     PageNotFoundComponent,
+
   ],
   imports: [
     BrowserModule,

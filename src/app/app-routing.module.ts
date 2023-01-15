@@ -40,6 +40,9 @@ import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-for
 import { KeyValuePipeComponent } from './topics/pipes/built-in/key-value-pipe/key-value-pipe.component';
 import { RoutingTheoryComponent } from './topics/routing/routing-theory/routing-theory.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { RHomeComponent } from './topics/routing/inner-routing/rhome/rhome.component';
+import { RProductsComponent } from './topics/routing/inner-routing/rproducts/rproducts.component';
+import { RContactComponent } from './topics/routing/inner-routing/rcontact/rcontact.component';
 
 const routes: Routes = [
   {
@@ -242,8 +245,11 @@ const routes: Routes = [
           {
             path: 'theory',
           component: RoutingTheoryComponent
+        },
+        {
+          path: 'inner-routing',
+          loadChildren: ()=> import('./topics/routing/inner-routing/innerRouting.module').then(m=>m.InnerAppRoutingModule)
         }
-
         ]
       }
     ]
