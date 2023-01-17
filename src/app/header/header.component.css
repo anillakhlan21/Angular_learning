@@ -26,3 +26,10 @@
 .scroll-hide::-webkit-scrollbar {
     display: none;
 }
+
+.logout {
+    margin-left: 14px;
+    height: max-content;
+    width: max-content;
+    padding: 6px;
+}
