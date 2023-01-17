@@ -44,6 +44,7 @@ import { RHomeComponent } from './topics/routing/inner-routing/rhome/rhome.compo
 import { RProductsComponent } from './topics/routing/inner-routing/rproducts/rproducts.component';
 import { RContactComponent } from './topics/routing/inner-routing/rcontact/rcontact.component';
 import { LoginComponent } from './authentication/login/login.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -57,6 +58,7 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
+    canActivate: [AuthGuard],
     component: DashboardComponent,
     children: [
       {

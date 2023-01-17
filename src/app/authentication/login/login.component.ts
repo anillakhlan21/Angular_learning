@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Route, Router } from '@angular/router';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private _fb: FormBuilder,
     private _activatedRoute: ActivatedRoute,
-    private _route: Router
+    private _route: Router,
+    private _auth: AuthService
     ) { }
 
   ngOnInit(): void {
@@ -23,7 +25,8 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(){
-    this._route.navigateByUrl('/dashboard')
+    this.loginForm.valid && this._route.navigateByUrl('/dashboard');
+    this.loginForm.valid && this._auth.login();
   }
 
 }

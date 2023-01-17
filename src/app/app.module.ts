@@ -65,6 +65,8 @@ import { InnerRoutingComponent } from './topics/routing/inner-routing/inner-rout
 import { InnerAppRoutingModule } from './topics/routing/inner-routing/innerRouting.module';
 import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
+import { AuthService } from './services/auth.service';
+import { AuthGuard } from './services/auth.guard';
 
 registerLocaleData(localeFr);
 
@@ -131,7 +133,7 @@ registerLocaleData(localeFr);
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [DatePipe],
+  providers: [DatePipe,AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
