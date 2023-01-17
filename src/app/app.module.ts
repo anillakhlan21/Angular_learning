@@ -63,6 +63,8 @@ import { RContactComponent } from './topics/routing/inner-routing/rcontact/rcont
 import { RProductsComponent } from './topics/routing/inner-routing/rproducts/rproducts.component';
 import { InnerRoutingComponent } from './topics/routing/inner-routing/inner-routing.component';
 import { InnerAppRoutingModule } from './topics/routing/inner-routing/innerRouting.module';
+import { LoginComponent } from './authentication/login/login.component';
+import { RegistrationComponent } from './authentication/registration/registration.component';
 
 registerLocaleData(localeFr);
 
@@ -119,6 +121,8 @@ registerLocaleData(localeFr);
     TemplateFormValidationComponent,
     RoutingTheoryComponent,
     PageNotFoundComponent,
+    LoginComponent,
+    RegistrationComponent,
 
   ],
   imports: [

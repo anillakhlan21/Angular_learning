@@ -1,0 +1,29 @@
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+
+@Component({
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
+})
+export class LoginComponent implements OnInit {
+  loginForm: FormGroup;
+  constructor(
+    private _fb: FormBuilder,
+    private _activatedRoute: ActivatedRoute,
+    private _route: Router
+    ) { }
+
+  ngOnInit(): void {
+    this.loginForm = this._fb.group({
+      userName: this._fb.control('',Validators.required),
+      password: this._fb.control('', Validators.required)
+    })
+  }
+
+  onSubmit(){
+    this._route.navigateByUrl('/dashboard')
+  }
+
+}

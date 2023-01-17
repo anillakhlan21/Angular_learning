@@ -43,12 +43,17 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { RHomeComponent } from './topics/routing/inner-routing/rhome/rhome.component';
 import { RProductsComponent } from './topics/routing/inner-routing/rproducts/rproducts.component';
 import { RContactComponent } from './topics/routing/inner-routing/rcontact/rcontact.component';
+import { LoginComponent } from './authentication/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'dashboard',
