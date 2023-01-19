@@ -27,6 +27,7 @@ export class LoginComponent implements OnInit {
   onSubmit(){
     if(this.loginForm.valid){
       this._route.navigateByUrl('/dashboard');
+      // this._route.navigate(['/dashboard'])
       this._auth.login(this.loginForm.get('userName')?.value);
     }
   }
