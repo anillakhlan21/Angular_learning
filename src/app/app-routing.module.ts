@@ -45,6 +45,8 @@ import { RProductsComponent } from './topics/routing/inner-routing/rproducts/rpr
 import { RContactComponent } from './topics/routing/inner-routing/rcontact/rcontact.component';
 import { LoginComponent } from './authentication/login/login.component';
 import { AuthGuard } from './services/auth.guard';
+import { ProfileComponent } from './profile/profile.component';
+import { DeactivateGuard } from './services/deactivate.guard';
 
 const routes: Routes = [
   {
@@ -62,6 +64,11 @@ const routes: Routes = [
     canActivateChild: [AuthGuard],
     component: DashboardComponent,
     children: [
+      {
+        path: 'profile',
+        component: ProfileComponent,
+        canDeactivate: [DeactivateGuard]
+      },
       {
         path: 'life-cycle-hooks',
         children: [
@@ -252,12 +259,12 @@ const routes: Routes = [
         children: [
           {
             path: 'theory',
-          component: RoutingTheoryComponent
-        },
-        {
-          path: 'inner-routing',
-          loadChildren: ()=> import('./topics/routing/inner-routing/innerRouting.module').then(m=>m.InnerAppRoutingModule)
-        }
+            component: RoutingTheoryComponent
+          },
+          {
+            path: 'inner-routing',
+            loadChildren: () => import('./topics/routing/inner-routing/innerRouting.module').then(m => m.InnerAppRoutingModule)
+          }
         ]
       }
     ]

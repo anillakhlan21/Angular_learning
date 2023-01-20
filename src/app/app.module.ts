@@ -41,7 +41,7 @@ import { PercentPipeComponent } from './topics/pipes/built-in/percent-pipe/perce
 import { CurrencyPipeComponent } from './topics/pipes/built-in/currency-pipe/currency-pipe.component';
 
 
-import { DatePipe, registerLocaleData } from '@angular/common';
+import { CommonModule, DatePipe, registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
 import { JsonPipeComponent } from './topics/pipes/built-in/json-pipe/json-pipe.component';
 import { AsyncPipeComponent } from './topics/pipes/built-in/async-pipe/async-pipe.component';
@@ -67,6 +67,7 @@ import { LoginComponent } from './authentication/login/login.component';
 import { RegistrationComponent } from './authentication/registration/registration.component';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth.guard';
+import { ProfileComponent } from './profile/profile.component';
 
 registerLocaleData(localeFr);
 
@@ -125,10 +126,12 @@ registerLocaleData(localeFr);
     PageNotFoundComponent,
     LoginComponent,
     RegistrationComponent,
+    ProfileComponent,
 
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,

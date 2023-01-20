@@ -1,0 +1,12 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" formControlName="name" [readonly]="viewMode">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" formControlName="email" [readonly]="viewMode">
+    </div>
+
+    <button type="submit" class="btn btn-primary">{{viewMode ? 'Edit' : 'Save'}}</button>
+</form>

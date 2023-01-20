@@ -1,5 +1,6 @@
 <div class="m-3 p-3 border border-primary">
     <h1>Reactive forms</h1>
+    <!-----------Basic Use of Reactive form----------------------- -->
     <div class="m-3 p-3 border border-secondary">
         <h3>Basic Use of Reactive form</h3>
         <form [formGroup]="contactForm1" (ngSubmit)="onSubmit(1)">
@@ -44,6 +45,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <!-----------Nested Form Group----------------------- -->
     <div class="m-3 p-3 border border-info">
         <h3>Nested FormGroup</h3>
         <form [formGroup]="contactForm2" (ngSubmit)="onSubmit(2)">
@@ -110,6 +112,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    <!-- ---------Using Angular FormBuilder to build Forms----------------------- -->
     <div class="m-3 p-3 border border-info">
         <h3>Using Angular FormBuilder to build Forms</h3>
         <form [formGroup]="contactForm3" (ngSubmit)="onSubmit(2)">
@@ -214,5 +217,50 @@
             <h3>Form Value</h3>
             {{contactForm3.value |json}}
         </div>
+    </div>
+    <!-----------Can DeActivate Guard Use case----------------------- -->
+    <div class="m-3 p-3 border border-info">
+        <h3>Can DeActivate Guard Use case</h3>
+        <form [formGroup]="contactForm4" (ngSubmit)="onSubmit(4)">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" class="form-control" formControlName="firstname" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" class="form-control" formControlName="lastname" />
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" formControlName="email" />
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <div class="form-check">
+                    <input type="radio" value="male" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Male</label>
+                </div>
+                <div class="form-check">
+                    <input type="radio" value="female" id="gender" name="gender" class="form-check-input" formControlName="gender" />
+                    <label class="form-check-label" for="gender">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox" id="isMarried" name="isMarried" class="form-check-input" formControlName="isMarried" />
+                    <label class="form-check-label" for="isMarried">Married</label>
+                </div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="country">Country</label>
+                <select name="country" id="country" class="form-control" formControlName="country">
+    <option selected="" value=""></option>
+    <option [ngValue]="c.id" *ngFor="let c of countryList"> {{ c.name }} </option>
+  </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
     </div>
 </div>

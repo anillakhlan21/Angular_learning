@@ -10,6 +10,8 @@ export class ReactiveFormsComponent implements OnInit {
   contactForm1: FormGroup;
   contactForm2: FormGroup;
   contactForm3: FormGroup;
+  contactForm4: FormGroup;
+
   countryList: { name: string; id: number }[] = [
     { id: 1, name: 'India' },
     { id: 2, name: 'China' },
@@ -58,6 +60,18 @@ export class ReactiveFormsComponent implements OnInit {
       }),
       skills: this.formBuilder.array([])
     });
+
+    this.contactForm4 = new FormGroup({
+      //Setting Default value as string
+      firstname: new FormControl(''),
+      //Setting Default value & disabled state as object
+      lastname: new FormControl(''),
+      // Sync Validator
+      email: new FormControl('', [Validators.email]),
+      gender: new FormControl('male'),
+      isMarried: new FormControl(false),
+      country: new FormControl(1)
+    })
 
 this.contactForm3.get("firstname")?.valueChanges.subscribe(selectedValue => {
   console.log('firstname value changed')

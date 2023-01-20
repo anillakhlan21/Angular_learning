@@ -5,17 +5,24 @@ import { RContactComponent } from "./rcontact/rcontact.component";
 import { InnerRoutingComponent } from "./inner-routing.component";
 import { RouterModule } from "@angular/router";
 import { InnerRoutingModule } from "./inner-routing.module";
+import { UsersComponent } from './users/users.component';
+import { UserComponent } from './users/user/user.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { CommonModule } from "@angular/common";
 
 @NgModule({
   declarations: [
     RHomeComponent,
     RProductsComponent,
     RContactComponent,
-    InnerRoutingComponent
+    InnerRoutingComponent,
+    UsersComponent,
+    UserComponent
   ],
   imports: [
     RouterModule,
-    InnerRoutingModule
+    InnerRoutingModule,
+    CommonModule
   ],
   exports: [RHomeComponent, RProductsComponent, RContactComponent]
 })

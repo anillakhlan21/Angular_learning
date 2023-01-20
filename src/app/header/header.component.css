@@ -33,3 +33,21 @@
     width: max-content;
     padding: 6px;
 }
+
+.circle {
+    display: inline-block;
+    background-color: #00d53b;
+    margin: 10px;
+    border-radius: 50%;
+    padding: 5px;
+}
+
+.circle-inner {
+    color: white;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    height: 33px;
+    width: 33px;
+}
