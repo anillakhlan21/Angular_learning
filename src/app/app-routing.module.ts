@@ -47,6 +47,11 @@ import { LoginComponent } from './authentication/login/login.component';
 import { AuthGuard } from './services/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { DeactivateGuard } from './services/deactivate.guard';
+import { NgTemplateComponent } from './topics/template-elements/ng-template/ng-template.component';
+import { NgTemplateOutlet } from '@angular/common';
+import { NgContainerComponent } from './topics/template-elements/ng-container/ng-container.component';
+import { NgContentComponent } from './topics/template-elements/ng-content/ng-content.component';
+import { NgTemplateOutletComponent } from './topics/template-elements/ng-template-outlet/ng-template-outlet.component';
 
 const routes: Routes = [
   {
@@ -264,6 +269,27 @@ const routes: Routes = [
           {
             path: 'inner-routing',
             loadChildren: () => import('./topics/routing/inner-routing/innerRouting.module').then(m => m.InnerAppRoutingModule)
+          }
+        ]
+      },
+      {
+        path: 'template-elements',
+        children: [
+          {
+            path: 'ng-template',
+            component: NgTemplateComponent
+          },
+          {
+            path: 'ng-template-outlet',
+            component: NgTemplateOutletComponent
+          },
+          {
+            path: 'ng-container',
+            component: NgContainerComponent
+          },
+          {
+            path: 'ng-content',
+            component: NgContentComponent
           }
         ]
       }

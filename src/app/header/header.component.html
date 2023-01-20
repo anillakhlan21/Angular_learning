@@ -236,84 +236,87 @@
                         </li>
                         <hr>
                         <li>
-                            <a class="dropdown-item">ng-template</a>
+                            <a routerLink="template-elements/ng-template" class="dropdown-item">ng-template</a>
                         </li>
                         <li>
-                            <a class="dropdown-item">ng-content</a>
+                            <a routerLink="template-elements/ng-content" class=" dropdown-item ">ng-content</a>
                         </li>
                         <li>
-                            <a class="dropdown-item">ng-container</a>
+                            <a routerLink="template-elements/ng-container" class="dropdown-item ">ng-container</a>
+                        </li>
+                        <li>
+                            <a routerLink="template-elements/ng-template-outlet" class="dropdown-item ">ng-template-outlet</a>
                         </li>
                     </ul>
                 </li>
                 <!------------------Services and dependency injection------------------------------->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Services & dependency injection</a>
-                    <ul class="dropdown-menu">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " role="button " data-bs-toggle="dropdown ">Services & dependency injection</a>
+                    <ul class="dropdown-menu ">
                         <li>
-                            <a class="dropdown-item">Theory</a>
+                            <a class="dropdown-item ">Theory</a>
                         </li>
                     </ul>
                 </li>
                 <!------------------Component Communication------------------------------->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Component Communication</a>
-                    <ul class="dropdown-menu">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " role="button " data-bs-toggle="dropdown ">Component Communication</a>
+                    <ul class="dropdown-menu ">
                         <li>
-                            <a class="dropdown-item">Theory</a>
+                            <a class="dropdown-item ">Theory</a>
                         </li>
                         <hr>
                         <li>
-                            <a class="dropdown-item">Parent to Child</a>
+                            <a class="dropdown-item ">Parent to Child</a>
                         </li>
                         <li>
-                            <a class="dropdown-item">Child to parent &raquo;</a>
-                            <ul class="dropdown-menu dropdown-submenu">
+                            <a class="dropdown-item ">Child to parent &raquo;</a>
+                            <ul class="dropdown-menu dropdown-submenu ">
                                 <li>
-                                    <a class="dropdown-item">@Output</a>
+                                    <a class="dropdown-item ">@Output</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item">@ViewChild</a>
+                                    <a class="dropdown-item ">@ViewChild</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a class="dropdown-item">Siblings(C1-P-C2)</a>
+                            <a class="dropdown-item ">Siblings(C1-P-C2)</a>
                         </li>
                         <li>
-                            <a class="dropdown-item">Through services</a>
+                            <a class="dropdown-item ">Through services</a>
                         </li>
                     </ul>
                 </li>
                 <!------------------RxJS------------------------------->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">RxJS</a>
-                    <ul class="dropdown-menu">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " role="button " data-bs-toggle="dropdown ">RxJS</a>
+                    <ul class="dropdown-menu ">
                         <li>
-                            <a class="dropdown-item">Theory</a>
+                            <a class="dropdown-item ">Theory</a>
                         </li>
                     </ul>
                 </li>
                 <!------------------HTTP------------------------------->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">HTTP</a>
-                    <ul class="dropdown-menu">
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle " role="button " data-bs-toggle="dropdown ">HTTP</a>
+                    <ul class="dropdown-menu ">
                         <li>
-                            <a class="dropdown-item">Theory</a>
+                            <a class="dropdown-item ">Theory</a>
                         </li>
                     </ul>
                 </li>
             </ul>
             <!------------Search Input Field------------------------>
-            <!-- <form class="d-flex input-field" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <!-- <form class="d-flex input-field " role="search ">
+                <input class="form-control me-2 " type="search " placeholder="Search " aria-label="Search " />
+                <button class="btn btn-outline-success " type="submit ">Search</button>
 
             </form> -->
-            <div class="circle" routerLink="profile">
-                <p class="circle-inner">A</p>
+            <div class="circle " routerLink="profile ">
+                <p class="circle-inner ">A</p>
             </div>
-            <button class="btn btn-outline-success logout" type="button" (click)="logout()">Log out</button>
+            <button class="btn btn-outline-success logout " type="button " (click)="logout() ">Log out</button>
         </div>
     </div>
 </nav>

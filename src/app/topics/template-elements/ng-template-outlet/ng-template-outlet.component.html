@@ -1,0 +1,13 @@
+<div class="box">
+    <ng-template #template1>
+        <p>This is template 1</p>
+    </ng-template>
+
+    <ng-template #template2>
+        <p>This is template 2</p>
+    </ng-template>
+
+    <ng-container *ngTemplateOutlet="selectedTemplate"></ng-container>
+
+    <button (click)="changeTemplate()">Change template</button>
+</div>

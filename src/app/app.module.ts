@@ -68,6 +68,11 @@ import { RegistrationComponent } from './authentication/registration/registratio
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
+import { NgContainerComponent } from './topics/template-elements/ng-container/ng-container.component';
+import { NgContentComponent } from './topics/template-elements/ng-content/ng-content.component';
+import { NgTemplateComponent } from './topics/template-elements/ng-template/ng-template.component';
+import { NgTemplateOutletComponent } from './topics/template-elements/ng-template-outlet/ng-template-outlet.component';
+import { ContentChildComponent } from './topics/template-elements/ng-content/content-child/content-child.component';
 
 registerLocaleData(localeFr);
 
@@ -127,6 +132,11 @@ registerLocaleData(localeFr);
     LoginComponent,
     RegistrationComponent,
     ProfileComponent,
+    NgContainerComponent,
+    NgContentComponent,
+    NgTemplateComponent,
+    NgTemplateOutletComponent,
+    ContentChildComponent,
 
   ],
   imports: [

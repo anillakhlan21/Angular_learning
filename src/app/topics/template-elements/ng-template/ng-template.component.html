@@ -1,0 +1,41 @@
+<div class="box">
+    <h1>ng-template</h1>
+    <div class="box">
+        As the name suggests the is a template element that Angular uses with structural directives (*ngIf, *ngFor, [ngSwitch] and custom directives).
+    </div>
+    <div>
+        <ng-template [ngIf]="isVisible">
+            <p>This is paragraph</p>
+        </ng-template>
+        <button (click)="isVisible=!isVisible" class="btn btn-primary">Toggle</button>
+    </div>
+    <div class="box">
+        <ng-template ngFor [ngForOf]="arr" let-item>
+            <h4>{{item}}</h4>
+        </ng-template>
+    </div>
+    <div class="box">
+        <div [ngSwitch]="count">
+            <ng-template *ngSwitchCase="1">
+                <p>Example One</p>
+            </ng-template>
+            <ng-template [ngSwitchCase]="2">
+                <p>Example Two</p>
+            </ng-template>
+            <ng-template [ngSwitchCase]="3">
+                <p>Example Three</p>
+            </ng-template>
+            <ng-template [ngSwitchDefault]>
+                <p>NoExample</p>
+            </ng-template>
+        </div>
+    </div>
+</div>
+
+
+<!-- example for ng-content  -->
+<app-content-child>
+    <h1 class="card-header">Second card header</h1>
+    <p class="card-body">second card body</p>
+    <button class="card-footer">second card footer</button>
+</app-content-child>
