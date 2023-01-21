@@ -52,6 +52,8 @@ import { NgTemplateOutlet } from '@angular/common';
 import { NgContainerComponent } from './topics/template-elements/ng-container/ng-container.component';
 import { NgContentComponent } from './topics/template-elements/ng-content/ng-content.component';
 import { NgTemplateOutletComponent } from './topics/template-elements/ng-template-outlet/ng-template-outlet.component';
+import { ServiceTheoryComponent } from './topics/services-dependency/service-theory/service-theory.component';
+import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
 
 const routes: Routes = [
   {
@@ -290,6 +292,19 @@ const routes: Routes = [
           {
             path: 'ng-content',
             component: NgContentComponent
+          }
+        ]
+      },
+      {
+        path: 'services',
+        children: [
+          {
+            path: 'theory',
+            component: ServiceTheoryComponent
+          },
+          {
+            path: 'services-and-dependency-injection',
+            component: ServicesDependencyComponent
           }
         ]
       }

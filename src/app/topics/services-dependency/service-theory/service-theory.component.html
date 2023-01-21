@@ -1,0 +1,89 @@
+<div class="box">
+    <h1>Service and dependency Injection</h1>
+    <div class="box">
+        <h3>What mean by services</h3>
+        <p>
+            Service is a class that has the purpose of Providing a Service to a Component, Directive, or to another Service. The Service may be fetching data from the back end, running a business logic, etc
+        </p>
+        <p>
+            Service is a piece of reusable code with a focused purpose. A code that you will use in many components across your application
+        </p>
+        <p>
+            Our components need to access the data. You can write data access code in each component, but that is very inefficient and breaks the rule of single responsibility. The Component must focus on presenting data to the user. The task of getting data from
+            the back-end server must be delegated to some other class. We call such a class a Service class. Because it provides the service of providing data to every component that needs it.
+        </p>
+    </div>
+    <div class="box">
+        <h3>What Angular Services are used for</h3>
+        <ol>
+            <li>
+                <p>
+                    Features that are independent of components such a logging services
+                </p>
+            </li>
+            <li>
+                <p>Share logic or data across components</p>
+            </li>
+            <li>
+                <p>Encapsulate external interactions like data access</p>
+            </li>
+        </ol>
+    </div>
+    <div class="box">
+        <h3>Advantageous of Angular Service</h3>
+        <ol>
+            <li>
+                <p>Services are easier to test.</p>
+            </li>
+            <li>
+                <p>They are easier to Debug.</p>
+            </li>
+            <li>
+                <p>We can reuse the service at many places.</p>
+            </li>
+        </ol>
+    </div>
+    <div class="box">
+        <h1>How to create a Service in Angular</h1>
+        <p>
+            An Angular service is simply a Javascript class. All we need to do is to create a class and add methods & properties. We can then create an instance of this class in our component and call its methods. One of the best uses of services is to get the data
+            from the data source. Let us create a simple service, which gets the product data and passes it to our component.
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>Directly instantiating the service, has many disadvantageous</h2>
+        <ol>
+            <li>
+                <p>
+                    The ProductService is tightly coupled to the Component. If we change the ProductService class definition, then we need to update every code where service is used
+                </p>
+            </li>
+            <li>
+                <p>
+                    If we want to change ProductService with BetterProductService, then we need to search wherever the ProductService is used and manually change it
+                </p>
+            </li>
+            <li>
+                <p>
+                    Makes Testing difficult. We may need to provide mockProductService for testing and use the ProductService for Production.
+                </p>
+            </li>
+        </ol>
+        <p>We can solve this by using the Angular Dependency injection, </p>
+    </div>
+    <div class="box">
+        <h3>Dependency Injection</h3>
+        <p>The Angular dependency injection is now the core part of the Angular. It allows us to inject dependencies into the Component, Directives, Pipes, or Services.</p>
+        <p>We can inject dependency into a Component, Directives, Pipes, or a Service</p>
+    </div>
+    <div class="box">
+        <h3>What is Dependency</h3>
+        <p> The ServicesDependencyComponent depends on the ProductService to provide the list of Products to display. In short, the ServicesDependencyComponent has a dependency on ProductService.</p>
+
+    </div>
+    <div class="box">
+        <h3>What is Angular Dependency Injection</h3>
+        <p><b>Dependency Injection (DI) is a technique in which a class receives its dependencies from external sources rather than creating them itself.</b></p>
+    </div>
+</div>

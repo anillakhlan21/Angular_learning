@@ -75,6 +75,8 @@ import { NgTemplateOutletComponent } from './topics/template-elements/ng-templat
 import { ContentChildComponent } from './topics/template-elements/ng-content/content-child/content-child.component';
 import { HighlightDirective } from './topics/directives/attribute-directives/custom/highlight.directive';
 import { ReversePipe } from './topics/pipes/custom/reverse.pipe';
+import { ServiceTheoryComponent } from './topics/services-dependency/service-theory/service-theory.component';
+import { ProductService } from './services/product.service';
 
 registerLocaleData(localeFr);
 
@@ -141,6 +143,7 @@ registerLocaleData(localeFr);
     ContentChildComponent,
     HighlightDirective,
     ReversePipe,
+    ServiceTheoryComponent,
 
   ],
   imports: [
@@ -150,7 +153,13 @@ registerLocaleData(localeFr);
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [DatePipe,AuthService, AuthGuard],
+  providers: [
+    DatePipe,
+    AuthService, 
+    AuthGuard,
+    // ProductService
+    {provide: ProductService, useClass: ProductService}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
