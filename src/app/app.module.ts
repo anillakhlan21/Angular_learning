@@ -47,10 +47,10 @@ import { JsonPipeComponent } from './topics/pipes/built-in/json-pipe/json-pipe.c
 import { AsyncPipeComponent } from './topics/pipes/built-in/async-pipe/async-pipe.component';
 import { TitleCasePipeComponent } from './topics/pipes/built-in/title-case-pipe/title-case-pipe.component';
 import { CustomPipesComponent } from './topics/pipes/custom/custom-pipes/custom-pipes.component';
-import { PluralPipe } from './topics/pipes/custom/pluralization/plural.pipe';
+import { PluralPipe } from './topics/pipes/custom/plural.pipe';
 import { CustomAttributeDirectivesComponent } from './topics/directives/attribute-directives/custom/custom-attribute-directives/custom-attribute-directives.component';
 import { CustomStructuralDirectivesComponent } from './topics/directives/structural-directives/custom/custom-structural-directives/custom-structural-directives.component';
-import { ImageZoomDirective } from './topics/directives/attribute-directives/custom/image-zoom/image-zoom.directive';
+import { ImageZoomDirective } from './topics/directives/attribute-directives/custom/image-zoom.directive';
 import { FormsTheoryComponent } from './topics/forms/forms-theory/forms-theory.component';
 import { ReactiveFormsComponent } from './topics/forms/reactive-forms/reactive-forms.component';
 import { TemplateDrivenFormsComponent } from './topics/forms/template-driven-forms/template-driven-forms.component';
@@ -73,6 +73,8 @@ import { NgContentComponent } from './topics/template-elements/ng-content/ng-con
 import { NgTemplateComponent } from './topics/template-elements/ng-template/ng-template.component';
 import { NgTemplateOutletComponent } from './topics/template-elements/ng-template-outlet/ng-template-outlet.component';
 import { ContentChildComponent } from './topics/template-elements/ng-content/content-child/content-child.component';
+import { HighlightDirective } from './topics/directives/attribute-directives/custom/highlight.directive';
+import { ReversePipe } from './topics/pipes/custom/reverse.pipe';
 
 registerLocaleData(localeFr);
 
@@ -137,6 +139,8 @@ registerLocaleData(localeFr);
     NgTemplateComponent,
     NgTemplateOutletComponent,
     ContentChildComponent,
+    HighlightDirective,
+    ReversePipe,
 
   ],
   imports: [

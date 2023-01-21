@@ -17,7 +17,7 @@ import { CommonModule } from "@angular/common";
     RContactComponent,
     InnerRoutingComponent,
     UsersComponent,
-    UserComponent
+    UserComponent,
   ],
   imports: [
     RouterModule,

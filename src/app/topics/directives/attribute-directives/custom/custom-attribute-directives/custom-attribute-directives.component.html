@@ -4,11 +4,19 @@
         <h3>Image zoom directive</h3>
         <div class="m-1 p-1">
             <input type="number" [(ngModel)]="zoomPercentageFist" class="form-control">
-            <img src=" ../../../../../../assets/images/nature_1.jpeg " [appImageZoom]="zoomPercentageFist" alt=" ">
+            <img src=" ../../../../../../assets/images/nature_1.jpeg" [appImageZoom]="zoomPercentageFist" alt=" ">
         </div>
         <div class="m-1 p-1">
             <input type="number" [(ngModel)]="zoomPercentageSecond" class="form-control">
             <img src=" ../../../../../../assets/images/nature_2.jpeg" [appImageZoom]="zoomPercentageSecond" alt=" ">
         </div>
     </div>
-</div>
+
+
+    <!-- app-highlight directive ------------------------>
+    <div class="box">
+        <h1>app-highlight directive </h1>
+        <div class="box">
+            <p [appHighlight]="{enterColor: 'green', exitColor: 'red'}">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi, cupiditate.</p>
+        </div>
+    </div>

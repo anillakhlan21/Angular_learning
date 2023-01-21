@@ -5,4 +5,16 @@
         <h3>Plural Pipe</h3>
         <div>{{ numItems | plural: 'item': 'items' }}</div>
     </div>
+    <div class="box">
+        <h3>Reverse pipe</h3>
+        <input type="text" [(ngModel)]="name" class="form-control">
+        <h5>{{name | reverse}}</h5>
+    </div>
 </div>
+
+
+
+
+<!-- how to access element using viewchild and use of el.nativeElement  -->
+<!-- <p #para class="big-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, neque!</p> -->
+<p #para2 (mouseenter)="onMouseEnter()" (mouseleave)="onMouseExit()">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, doloribus.</p>
