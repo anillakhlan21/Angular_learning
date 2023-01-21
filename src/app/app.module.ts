@@ -77,6 +77,7 @@ import { HighlightDirective } from './topics/directives/attribute-directives/cus
 import { ReversePipe } from './topics/pipes/custom/reverse.pipe';
 import { ServiceTheoryComponent } from './topics/services-dependency/service-theory/service-theory.component';
 import { ProductService } from './services/product.service';
+import { LoggerService } from './services/logger.service';
 
 registerLocaleData(localeFr);
 
@@ -155,10 +156,11 @@ registerLocaleData(localeFr);
   ],
   providers: [
     DatePipe,
-    AuthService, 
+    AuthService,
     AuthGuard,
     // ProductService
-    {provide: ProductService, useClass: ProductService}
+    { provide: ProductService, useClass: ProductService },
+    LoggerService
   ],
   bootstrap: [AppComponent]
 })
