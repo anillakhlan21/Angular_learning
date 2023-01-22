@@ -1,0 +1,11 @@
+<div class="box">
+    <h1>Data communication between Siblings</h1>
+    <div class="box">
+        <h5>Child P component </h5>
+        <app-child-p #child_p></app-child-p>
+    </div>
+    <div class="box">
+        <h5>Child Q Component</h5>
+        <app-child-q [detail]="child_p.studentsDetail"></app-child-q>
+    </div>
+</div>

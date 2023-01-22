@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-no-parent-child-relation',
@@ -6,10 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./no-parent-child-relation.component.css']
 })
 export class NoParentChildRelationComponent implements OnInit {
-
-  constructor() { }
+  country: string;
+  constructor(private auth: AuthService) { }
 
   ngOnInit(): void {
+  }
+  setUserCountry(){
+    this.auth.countryChangeEvent.emit(this.country)
   }
 
 }

@@ -86,6 +86,9 @@ import { ChildXComponent } from './topics/component-communication/parent-to-chil
 import { ChildYComponent } from './topics/component-communication/child-to-parent/child-y/child-y.component';
 import { ChildZComponent } from './topics/component-communication/parent-to-child/child-z/child-z.component';
 import { ChildWComponent } from './topics/component-communication/child-to-parent/child-w/child-w.component';
+import { SiblingsComponent } from './topics/component-communication/siblings/siblings.component';
+import { ChildPComponent } from './topics/component-communication/siblings/child-p/child-p.component';
+import { ChildQComponent } from './topics/component-communication/siblings/child-q/child-q.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -158,6 +161,9 @@ registerLocaleData(localeFr);
     ChildYComponent,
     ChildZComponent,
     ChildWComponent,
+    SiblingsComponent,
+    ChildPComponent,
+    ChildQComponent,
     
   ],
   imports: [
