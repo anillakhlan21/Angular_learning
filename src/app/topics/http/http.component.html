@@ -1,1 +1,127 @@
-<p>http works!</p>
+<div class="box">
+    <div class="container">
+        <h1 class="heading">
+            <strong>HTTP</strong> Demo
+        </h1>
+        <!-- random data  -->
+        <div class="table-responsive box">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>User Id</th>
+                        <th>Title</th>
+                        <th>Body</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let data of randomData">
+                        <td>{{ data.id }}</td>
+                        <td>{{ data.userId }}</td>
+                        <td data-toggle="tooltip" [title]="data.title">
+                            {{ data.title.length
+                            < 20 ? data.title : data.title.slice(0, 20) + '...' }} </td>
+                                <td data-toggle="tooltip" [title]="data.body">
+                                    {{ data.body.length
+                                    < 30 ? data.body : data.body.slice(0, 30) + '...' }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- sports api  -->
+        <div class="box">
+            <h5>Football match data</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>stadium</th>
+                        <th>country</th>
+                        <th>region</th>
+                        <th>tournament</th>
+                        <th>start</th>
+                        <th>match</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let sport of sports?.football">
+                        <td>{{ sport.stadium }}</td>
+                        <td>{{ sport.country }}</td>
+                        <td>{{sport.region || 'N/A'}}</td>
+                        <td>{{sport.tournament}}</td>
+                        <td>{{sport.start | date:'medium'}}</td>
+                        <td>{{sport.match}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
+<div class="box">
+    <h1>Customers</h1>
+    <div class="box">
+        <h3>All customers</h3>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>officialName</th>
+                    <th>companyName</th>
+                    <th>email</th>
+                    <th>phoneNumber</th>
+                    <th>billingAddress</th>
+                    <th>shippingAddress</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let customer of customersList">
+                    <td>{{customer.officialName || 'N/A'}}</td>
+                    <td>{{customer?.companyName || 'N/A'}}</td>
+                    <td>{{customer.email || 'N/A'}}</td>
+                    <td>{{customer?.phoneNumber || 'N/A'}}</td>
+                    <td>{{customer?.billingAddress || 'N/A'}}</td>
+                    <td>{{customer?.shippingAddress || 'N/A'}}</td>
+                    <td>
+                        <a (click)="fillForm(customer)" style="cursor: pointer; ">Edit</a>
+                    </td>
+                    <td>
+                        <a (click)=onDelete(customer.customerId) style="cursor: pointer; ">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="box ">
+        <h3>Create/Update Customer</h3>
+        <form [formGroup]="customerForm" class="form-group bg-gray-100 p-5 " (ngSubmit)="onSubmit()">
+            <div class="form-group ">
+                <label for="officialName ">Official Name</label>
+                <input type="text " class="form-control " id="officialName " formControlName="officialName" required>
+            </div>
+            <div class="form-group ">
+                <label for="companyName ">Company Name</label>
+                <input type="text " class="form-control " id="companyName " formControlName="companyName" required>
+            </div>
+            <div class="form-group ">
+                <label for="email ">Email</label>
+                <input type="email " class="form-control " id="email " formControlName="email" required>
+            </div>
+            <div class="form-group ">
+                <label for="phoneNumber ">Phone Number</label>
+                <input type="tel " class="form-control " id="phoneNumber " formControlName="phoneNumber" required>
+            </div>
+            <div class="form-group ">
+                <label for="billingAddress ">Billing Address</label>
+                <input type="text " class="form-control " id="billingAddress " formControlName="billingAddress" required>
+            </div>
+            <div class="form-group ">
+                <label for="shippingAddress ">Shipping Address</label>
+                <input type="text " class="form-control " id="shippingAddress " formControlName="shippingAddress" required>
+            </div>
+            <button type="submit " class="btn btn-primary ">{{createMode ? 'Create Customer' : 'Update Customer'}}</button>
+        </form>
+    </div>
+</div>

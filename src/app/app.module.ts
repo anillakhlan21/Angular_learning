@@ -79,6 +79,7 @@ import { ServiceTheoryComponent } from './topics/services-dependency/service-the
 import { ProductService } from './services/product.service';
 import { LoggerService } from './services/logger.service';
 import { HttpClientModule} from '@angular/common/http'
+import { HttpService } from './services/http.service';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -159,9 +160,10 @@ registerLocaleData(localeFr);
     DatePipe,
     AuthService,
     AuthGuard,
-    // ProductService
-    { provide: ProductService, useClass: ProductService },
-    LoggerService
+    ProductService,
+    // { provide: ProductService, useClass: ProductService },
+    LoggerService,
+    HttpService
   ],
   bootstrap: [AppComponent]
 })

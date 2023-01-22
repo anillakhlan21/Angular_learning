@@ -12,7 +12,10 @@ import { ProductService } from 'src/app/services/product.service';
 export class ServicesDependencyComponent implements OnInit {
   products:Product[];
   //  productService: any;
-  constructor(private productService: ProductService,private loggerService: LoggerService) {
+  constructor(
+    private productService: ProductService,
+    private loggerService: LoggerService
+    ) {
     // this.productService=new ProductService();
   }
 

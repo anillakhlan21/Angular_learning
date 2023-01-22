@@ -54,6 +54,7 @@ import { NgContentComponent } from './topics/template-elements/ng-content/ng-con
 import { NgTemplateOutletComponent } from './topics/template-elements/ng-template-outlet/ng-template-outlet.component';
 import { ServiceTheoryComponent } from './topics/services-dependency/service-theory/service-theory.component';
 import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
+import { HttpComponent } from './topics/http/http.component';
 
 const routes: Routes = [
   {
@@ -307,6 +308,10 @@ const routes: Routes = [
             component: ServicesDependencyComponent
           }
         ]
+      },
+      {
+        path: 'http',
+        component: HttpComponent
       }
     ]
   },
