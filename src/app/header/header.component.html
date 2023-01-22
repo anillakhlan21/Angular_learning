@@ -264,31 +264,23 @@
                 </li>
                 <!------------------Component Communication------------------------------->
                 <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle " role="button " data-bs-toggle="dropdown ">Component Communication</a>
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Component Communication</a>
                     <ul class="dropdown-menu ">
                         <li>
                             <a class="dropdown-item ">Theory</a>
                         </li>
                         <hr>
                         <li>
-                            <a class="dropdown-item ">Parent to Child</a>
+                            <a class="dropdown-item" routerLink="component-communication/parent-to-child"> Parent to Child </a>
                         </li>
                         <li>
-                            <a class="dropdown-item ">Child to parent &raquo;</a>
-                            <ul class="dropdown-menu dropdown-submenu ">
-                                <li>
-                                    <a class="dropdown-item ">@Output</a>
-                                </li>
-                                <li>
-                                    <a class="dropdown-item ">@ViewChild</a>
-                                </li>
-                            </ul>
+                            <a routerLink="component-communication/child-to-parent" class="dropdown-item ">Child to parent </a>
                         </li>
                         <li>
                             <a class="dropdown-item ">Siblings(C1-P-C2)</a>
                         </li>
                         <li>
-                            <a class="dropdown-item ">Through services</a>
+                            <a class="dropdown-item ">No parent child realtion (using services)</a>
                         </li>
                     </ul>
                 </li>

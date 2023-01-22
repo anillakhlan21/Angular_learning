@@ -1,0 +1,25 @@
+<div class="box">
+    <h1>Child to parent</h1>
+    <!-- @Output()---------------- -->
+    <div class="box">
+        <h3>@Output</h3>
+        <div class="box">
+            <h5>Data From Child</h5>
+            <p>{{data}}</p>
+            <div class="box">
+                <app-child-y (dataEvent)="commentReceived($event)"></app-child-y>
+            </div>
+        </div>
+    </div>
+    <!-- @ViewChild()---------------- -->
+    <div class="box">
+        <h3>@ViewChild</h3>
+        <div class="box">
+            <h5>Data From Child</h5>
+            <p>{{child.detail}}</p>
+            <div class="box">
+                <app-child-w #child></app-child-w>
+            </div>
+        </div>
+    </div>
+</div>

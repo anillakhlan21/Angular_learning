@@ -7,7 +7,6 @@ import { HeaderComponent } from './header/header.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LifeCycleHooksComponent } from './topics/life-cycle-hooks/life-cycle-hooks.component';
 import { DataBindingComponent } from './topics/data-binding/data-binding.component';
-import { ComponentCommunicationComponent } from './topics/component-communication/component-communication.component';
 import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
 import { HttpComponent } from './topics/http/http.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -80,6 +79,13 @@ import { ProductService } from './services/product.service';
 import { LoggerService } from './services/logger.service';
 import { HttpClientModule} from '@angular/common/http'
 import { HttpService } from './services/http.service';
+import { ParentToChildComponent } from './topics/component-communication/parent-to-child/parent-to-child.component';
+import { ChildToParentComponent } from './topics/component-communication/child-to-parent/child-to-parent.component';
+import { NoParentChildRelationComponent } from './topics/component-communication/no-parent-child-relation/no-parent-child-relation.component';
+import { ChildXComponent } from './topics/component-communication/parent-to-child/child-x/child-x.component';
+import { ChildYComponent } from './topics/component-communication/child-to-parent/child-y/child-y.component';
+import { ChildZComponent } from './topics/component-communication/parent-to-child/child-z/child-z.component';
+import { ChildWComponent } from './topics/component-communication/child-to-parent/child-w/child-w.component';
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -89,7 +95,6 @@ registerLocaleData(localeFr);
     DashboardComponent,
     LifeCycleHooksComponent,
     DataBindingComponent,
-    ComponentCommunicationComponent,
     ServicesDependencyComponent,
     HttpComponent,
     NgOnChangesComponent,
@@ -146,7 +151,14 @@ registerLocaleData(localeFr);
     HighlightDirective,
     ReversePipe,
     ServiceTheoryComponent,
-
+    ParentToChildComponent,
+    ChildToParentComponent,
+    NoParentChildRelationComponent,
+    ChildXComponent,
+    ChildYComponent,
+    ChildZComponent,
+    ChildWComponent,
+    
   ],
   imports: [
     BrowserModule,

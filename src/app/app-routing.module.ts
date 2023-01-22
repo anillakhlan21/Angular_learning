@@ -55,6 +55,9 @@ import { NgTemplateOutletComponent } from './topics/template-elements/ng-templat
 import { ServiceTheoryComponent } from './topics/services-dependency/service-theory/service-theory.component';
 import { ServicesDependencyComponent } from './topics/services-dependency/services-dependency.component';
 import { HttpComponent } from './topics/http/http.component';
+import { ParentToChildComponent } from './topics/component-communication/parent-to-child/parent-to-child.component';
+import { ChildToParentComponent } from './topics/component-communication/child-to-parent/child-to-parent.component';
+import { NoParentChildRelationComponent } from './topics/component-communication/no-parent-child-relation/no-parent-child-relation.component';
 
 const routes: Routes = [
   {
@@ -312,6 +315,23 @@ const routes: Routes = [
       {
         path: 'http',
         component: HttpComponent
+      },
+      {
+        path: 'component-communication',
+        children: [
+          {
+            path: 'parent-to-child',
+            component: ParentToChildComponent
+          },
+          {
+            path: 'child-to-parent',
+            component: ChildToParentComponent
+          },
+          {
+            path: 'no-parent-child relation',
+            component: NoParentChildRelationComponent
+          }
+        ]
       }
     ]
   },
