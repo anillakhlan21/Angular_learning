@@ -85,10 +85,10 @@
                     <td>{{customer?.billingAddress || 'N/A'}}</td>
                     <td>{{customer?.shippingAddress || 'N/A'}}</td>
                     <td>
-                        <a (click)="fillForm(customer)" style="cursor: pointer; ">Edit</a>
+                        <button disabled class="btn btn-info" (click)="fillForm(customer)" style="cursor: pointer; ">Edit</button>
                     </td>
                     <td>
-                        <a (click)=onDelete(customer.customerId) style="cursor: pointer; ">Delete</a>
+                        <button disabled class="btn btn-danger" (click)=onDelete(customer.customerId) style="cursor: pointer; ">Delete</button>
                     </td>
                 </tr>
             </tbody>
