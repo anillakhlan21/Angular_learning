@@ -9,10 +9,28 @@
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Enter your email">
         </div>
+
         <div class="form-group">
             <label for="message">Message</label>
             <textarea class="form-control" id="message" rows="3"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+</div>
+
+//wrong method
+<div class="form-group box">
+    <label for="email">Form</label>
+    <select>
+      <option routerLink="/dashboard/forms/reactive-forms">Reactive Form</option>
+      <option routerLink="/dashboard/forms/template-driven-forms">Template Form</option>
+    </select>
+</div>
+//correct method
+<div class="form-group box">
+    <label for="email">Form</label>
+    <select [routerLink]="form.value" #form>
+      <option value="/dashboard/forms/reactive-forms">Reactive Form</option>
+      <option value="/dashboard/forms/template-driven-forms">Template Form</option>
+    </select>
 </div>
