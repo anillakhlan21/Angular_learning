@@ -1,0 +1,90 @@
+<div class="border border-primary m-3 p-3">
+    <h1>Class Binding</h1>
+    <div class="p-1 m-1 border border-secondary">
+        <p>provide class names in string having space between class name</p>
+        <div [ngClass]="'primary big'">Sample Text</div>
+        <details>
+            [ngClass]="'cssClass1 cssClass2'" <br>
+            You can use the string as an expression and bind it directly to the ngClass attribute. If you want to assign multiple classes, separate each with space
+        </details>
+     
+    </div>
+
+    <div class="p-1 m-1 border border-secondary">
+        <p>Without Property Binding (without square bracket)</p>
+        <div ngClass="primary big">Sample Text</div> 
+        <details>
+            ngClass="primary big" <br>
+            You can also use the ngClass without a square bracket. In that case, the expression is not evaluated but assigned directly to the class attribute. As shown below, we must remove the double quote around the expression.
+        </details>
+    </div>
+
+    <div class="p-1 m-1 border border-secondary">
+        <p>NgClass with Array</p>
+        <div [ngClass]="['primary big','italics']">Sample Text</div>
+        <details>
+            &lt;element [ngClass]="['cssClass1', 'cssClass2']"&gt;...&lt;/element &gt; <br>
+            If the ngClass expression returns an array, Angular treats each array element as a CSS class. <br> <br>
+            &lt;div [ngClass]="['primary big','italics']" &gt;Sample Text &lt;/div &gt; <br>
+            If there is a space between the string of an element, then both will be treated as a separate class. For example, in the code below, the array element at index 0 has the value primary big. It will treat this as two different classes.
+        </details>
+           
+    </div>
+
+    <div class="p-1 m-1 border border-secondary">
+        <p>NgClass with Object</p>
+        <div [ngClass]="{ 'primary italics': true, big: true }">Sample Text</div>
+        <details>
+            You can also bind the ngClass to an object. The properties (keys) of the object will 
+            act as a class name. The properties must return a boolean value. If the return value 
+            is true, the class is applied. Else not. <br>
+
+            &lt; element [ngClass]="&rcub; 'cssClass1': true, 'cssClass2': true &rcub;"  &gt; ... &lt; /element &gt; <br>
+<br> <br>
+            If the property name contains spaces, it will treat it as two classes. But you need to use quotes around the property name. Quotes are also required if the class name has - etc. <br>
+            &lt; div [ngClass]="&rcub; primary: true, big: true &rcub;" &gt; Sample Text &lt; /div &gt;
+        </details>
+    </div>
+
+    <div class="p-1 m-1 border border-secondary">
+        <p>Applying class from component </p>
+        <div>
+            <b>Example 5: Value comming from the component method</b> <br />
+            <b>Example 5A (string)</b> <br />
+            <div [ngClass]="cssVar">Sample Text</div>
+ 
+            <b>Example 5B (array)</b> <br />
+            <div [ngClass]="cssArray">Sample Text</div>
+ 
+             <b>Example 5C (Object)</b> <br />
+            <div [ngClass]="cssClass">Sample Text</div>
+
+            <div [ngClass]="flag ? 'primary' : 'secondary'">
+                Sample Text
+                <button (click)="flag = !flag">Change Color</button>
+              </div>
+        </div>
+    </div>
+
+
+    <div class="p-1 m-1 border border-secondary">
+        <p>Conditionally applying class</p>
+        <div>
+            <ul>
+                <li *ngFor="let num of numbers">
+                  <div [ngClass]="getClass(num)">{{ num }}</div>
+                </li>
+              </ul>
+        </div>
+        <p>same as above but the only way is different</p>
+        <div>
+            <ul>
+                <li *ngFor="let num of numbers">
+                  <div [ngClass]="{ primary: num <= 50, secondary: num > 50 }">
+                    {{ num }}
+                  </div>
+                </li>
+              </ul>
+        </div>
+    </div>
+</div>

@@ -68,6 +68,16 @@ import { RegistrationComponent } from './authentication/registration/registratio
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
+import { TwoWayComponent } from './topics/data-binding/two-way/two-way.component';
+import { InterpolationComponent } from './topics/data-binding/one-way/component-to-view/interpolation/interpolation.component';
+import { PropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/property-binding.component';
+import { EventBindingComponent } from './topics/data-binding/one-way/view-to-component/event-binding/event-binding.component';
+import { NgModelComponent } from './topics/data-binding/two-way/ng-model/ng-model.component';
+import { ClassBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/class-binding/class-binding.component';
+import { StyleBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/style-binding/style-binding.component';
+import { AttributeBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/attribute-binding/attribute-binding.component';
+import { ChildComponentPropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-component-property-binding.component';
+import { ChildInDataBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-in-data-binding/child-in-data-binding.component';
 
 registerLocaleData(localeFr);
 
@@ -127,6 +137,16 @@ registerLocaleData(localeFr);
     LoginComponent,
     RegistrationComponent,
     ProfileComponent,
+    TwoWayComponent,
+    InterpolationComponent,
+    PropertyBindingComponent,
+    EventBindingComponent,
+    NgModelComponent,
+    ClassBindingComponent,
+    StyleBindingComponent,
+    AttributeBindingComponent,
+    ChildComponentPropertyBindingComponent,
+    ChildInDataBindingComponent,
 
   ],
   imports: [

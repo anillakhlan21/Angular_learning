@@ -47,6 +47,14 @@ import { LoginComponent } from './authentication/login/login.component';
 import { AuthGuard } from './services/auth.guard';
 import { ProfileComponent } from './profile/profile.component';
 import { DeactivateGuard } from './services/deactivate.guard';
+import { InterpolationComponent } from './topics/data-binding/one-way/component-to-view/interpolation/interpolation.component';
+import { PropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/property-binding.component';
+import { TwoWayComponent } from './topics/data-binding/two-way/two-way.component';
+import { EventBindingComponent } from './topics/data-binding/one-way/view-to-component/event-binding/event-binding.component';
+import { ChildComponentPropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-component-property-binding.component';
+import { StyleBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/style-binding/style-binding.component';
+import { ClassBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/class-binding/class-binding.component';
+import { AttributeBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/attribute-binding/attribute-binding.component';
 
 const routes: Routes = [
   {
@@ -68,6 +76,49 @@ const routes: Routes = [
         path: 'profile',
         component: ProfileComponent,
         canDeactivate: [DeactivateGuard]
+      },
+      {
+        path: 'data-binding',
+        children: [
+          {
+            path: 'one-way',
+            children: [
+              {
+                path: 'component-to-view/interpolation',
+                component: InterpolationComponent
+              },
+              {
+                path: 'component-to-view/property-binding',
+                children: [
+                  {
+                    path: 'style-binding',
+                    component: StyleBindingComponent
+                  },
+                  {
+                    path: 'class-binding',
+                    component: ClassBindingComponent
+                  },
+                  {
+                    path: 'attribute-binding',
+                    component : AttributeBindingComponent
+                  },
+                  {
+                    path: 'child-property-binding',
+                    component: ChildComponentPropertyBindingComponent
+                  }
+                ]
+              },
+              {
+                path: 'view-to-component/event-binding',
+                component: EventBindingComponent
+              }
+            ]
+          },
+          {
+            path: 'two-way/ng-Model',
+            component: TwoWayComponent
+          }
+        ]
       },
       {
         path: 'life-cycle-hooks',
