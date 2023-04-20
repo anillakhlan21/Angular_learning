@@ -77,7 +77,7 @@ import { ReversePipe } from './topics/pipes/custom/reverse.pipe';
 import { ServiceTheoryComponent } from './topics/services-dependency/service-theory/service-theory.component';
 import { ProductService } from './services/product.service';
 import { LoggerService } from './services/logger.service';
-import { HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http'
 import { HttpService } from './services/http.service';
 import { ParentToChildComponent } from './topics/component-communication/parent-to-child/parent-to-child.component';
 import { ChildToParentComponent } from './topics/component-communication/child-to-parent/child-to-parent.component';
@@ -99,6 +99,9 @@ import { StyleBindingComponent } from './topics/data-binding/one-way/component-t
 import { AttributeBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/attribute-binding/attribute-binding.component';
 import { ChildComponentPropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-component-property-binding.component';
 import { ChildInDataBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-in-data-binding/child-in-data-binding.component';
+import { MaterialComponent } from './topics/material/material.component';
+import { MaterialModule } from './topics/material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 registerLocaleData(localeFr);
 
@@ -174,7 +177,7 @@ registerLocaleData(localeFr);
     SiblingsComponent,
     ChildPComponent,
     ChildQComponent,
-    
+
     TwoWayComponent,
     InterpolationComponent,
     EventBindingComponent,
@@ -184,14 +187,17 @@ registerLocaleData(localeFr);
     AttributeBindingComponent,
     ChildComponentPropertyBindingComponent,
     ChildInDataBindingComponent,
-
+    NgTemplateComponent,
   ],
   imports: [
+    BrowserModule,
     CommonModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     DatePipe,

@@ -67,6 +67,7 @@ import { ChildComponentPropertyBindingComponent } from './topics/data-binding/on
 import { StyleBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/style-binding/style-binding.component';
 import { ClassBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/class-binding/class-binding.component';
 import { AttributeBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/attribute-binding/attribute-binding.component';
+import { MaterialComponent } from './topics/material/material.component';
 
 const routes: Routes = [
   {
@@ -328,6 +329,15 @@ const routes: Routes = [
             path: 'inner-routing',
             loadChildren: () => import('./topics/routing/inner-routing/innerRouting.module').then(m => m.InnerAppRoutingModule)
           }
+        ]
+      },
+      {
+        path: 'material',
+        children: [
+          {
+            path: '',
+            component: MaterialComponent
+          },
         ]
       },
       {
