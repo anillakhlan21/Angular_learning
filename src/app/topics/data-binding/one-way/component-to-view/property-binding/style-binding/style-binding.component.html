@@ -1,0 +1,36 @@
+<div class="border border-secondary m-3 p-3">
+    <h1>Style Binding</h1>
+    <div class="m-2 p-2 border border-primary">
+        <p>Change Style Dynamically</p>
+        <input [(ngModel)]="color" />
+        <div [ngStyle]="{'color': color}">Change my color</div>
+        <details> In the above example, we apply ngStyle directive to the div element. We assign JavaScript object <br>
+            &#10100; 'color': color&rcub; <br> to the ngStyledirective. The variable color is dynamically changed by the
+            user input and it is applied instantly to the div element <br> The following code uses the ternary operator
+            to set the background color to red if the status variables indicator is set to “error” else blue. <br> &lt;
+            div [ngStyle]="&#10100; 'background-color':status === 'error' ? 'red' : 'blue' &rcub;" &gt; &lt;/div &gt;
+        </details>
+        <div [ngStyle]="{'background-color':status === 'error' ? 'red' : 'blue' }"> Change My Color</div>
+        <button (click)="changeStatus()">Change Status</button>
+    </div>
+    <div class="m-2 p-2 border border-secondary">
+        <p>ngStyle multiple attributes</p>
+        <p [ngStyle]="{'color': 'purple',
+               'font-size': '20px',
+               'font-weight': 'bold'}"> Multiple styles </p>
+    </div>
+
+    <div class="m-2 p-2 border border-secondary">
+        <p>Specifying CSS Units in ngStyle</p>
+        <input type="number" [(ngModel)]="size" /> 
+<div [ngStyle]="{'font-size.px': size}">Change my size</div>
+        <details>CSS has several units for expressing a length, size etc. The units can be em, ex, %, px, cm, mm, in, pt, PC etc. We prefix the units to the StyleName as shown below.</details>
+    </div>
+
+    <div class="m-2 p-2 border border-secondary">
+        <p>Using object from Controller</p>
+        <div>
+            <div [ngStyle]="styleObj">size & Color</div>
+        </div>
+    </div>
+</div>

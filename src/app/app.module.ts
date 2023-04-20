@@ -89,6 +89,17 @@ import { ChildWComponent } from './topics/component-communication/child-to-paren
 import { SiblingsComponent } from './topics/component-communication/siblings/siblings.component';
 import { ChildPComponent } from './topics/component-communication/siblings/child-p/child-p.component';
 import { ChildQComponent } from './topics/component-communication/siblings/child-q/child-q.component';
+import { TwoWayComponent } from './topics/data-binding/two-way/two-way.component';
+import { InterpolationComponent } from './topics/data-binding/one-way/component-to-view/interpolation/interpolation.component';
+import { PropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/property-binding.component';
+import { EventBindingComponent } from './topics/data-binding/one-way/view-to-component/event-binding/event-binding.component';
+import { NgModelComponent } from './topics/data-binding/two-way/ng-model/ng-model.component';
+import { ClassBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/class-binding/class-binding.component';
+import { StyleBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/style-binding/style-binding.component';
+import { AttributeBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/attribute-binding/attribute-binding.component';
+import { ChildComponentPropertyBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-component-property-binding.component';
+import { ChildInDataBindingComponent } from './topics/data-binding/one-way/component-to-view/property-binding/child-component-property-binding/child-in-data-binding/child-in-data-binding.component';
+
 registerLocaleData(localeFr);
 
 @NgModule({
@@ -148,7 +159,6 @@ registerLocaleData(localeFr);
     ProfileComponent,
     NgContainerComponent,
     NgContentComponent,
-    NgTemplateComponent,
     NgTemplateOutletComponent,
     ContentChildComponent,
     HighlightDirective,
@@ -165,9 +175,18 @@ registerLocaleData(localeFr);
     ChildPComponent,
     ChildQComponent,
     
+    TwoWayComponent,
+    InterpolationComponent,
+    EventBindingComponent,
+    NgModelComponent,
+    ClassBindingComponent,
+    StyleBindingComponent,
+    AttributeBindingComponent,
+    ChildComponentPropertyBindingComponent,
+    ChildInDataBindingComponent,
+
   ],
   imports: [
-    BrowserModule,
     CommonModule,
     AppRoutingModule,
     FormsModule,
