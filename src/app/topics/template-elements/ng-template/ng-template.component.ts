@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-template.component.css']
 })
 export class NgTemplateComponent implements OnInit {
-  isVisible: boolean = false;
+  isVisible: boolean = true;
   arr: string[]= ['rahul','rajesh', 'pinkesh','raj']
   constructor() { }
   count: number =5

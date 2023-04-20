@@ -15,9 +15,10 @@ export class ChildCComponent implements OnInit,AfterContentInit {
   ngAfterContentInit(): void {
     //Called after ngOnInit when the component's or directive's content has been initialized.
     //Add 'implements AfterContentInit' to the class.
-    console.log("%c ngAfteContentInit is called", "color:green", this.headerEl)
-    console.log("%c ngAfteContentInit is called", "color:green",this.projectedContent)
-
+    console.log("%c ngAfteContentInit is called", "color:green", this.headerEl.nativeElement.innerText)
+    this.projectedContent.forEach((e)=>{
+      console.log("%c ngAfteContentInit is called", "color:green",e.nativeElement.innerText)
+    })
   }
 
 }
